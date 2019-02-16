@@ -1,3 +1,2 @@
-server.key
-server.pem
-docker/elasticsearch/
+docker/elasticsearch
+docker/log
