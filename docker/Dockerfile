@@ -3,16 +3,19 @@ FROM hysds/grq:latest
 MAINTAINER Gerald Manipon (pymonger) "pymonger@gmail.com"
 LABEL description="Seals GRQ image"
 
-# update
+# update system, copy and install latest tosca web app,
+# and link configuration files
+COPY --chown=ops:ops src/tosca $HOME/sciflo/ops/tosca
 RUN set -ex \
  && sudo yum update -y \
- && sudo rm -rf /var/cache/yum
-
-# link configuration files
-RUN set -ex \
- && ln -sf /home/ops/sciflo/etc/celeryconfig.py /home/ops/sciflo/ops/hysds/celeryconfig.py \
- && ln -sf /home/ops/sciflo/etc/grq2_settings.cfg /home/ops/sciflo/ops/grq2/settings.cfg \
- && ln -sf /home/ops/sciflo/etc/tosca_settings.cfg /home/ops/sciflo/ops/tosca/settings.cfg
+ && source $HOME/sciflo/bin/activate \
+ && cd $HOME/sciflo/ops/tosca \
+ && pip install -e . \
+ && ln -sf $HOME/sciflo/etc/celeryconfig.py $HOME/sciflo/ops/hysds/celeryconfig.py \
+ && ln -sf $HOME/sciflo/etc/grq2_settings.cfg $HOME/sciflo/ops/grq2/settings.cfg \
+ && ln -sf $HOME/sciflo/etc/tosca_settings.cfg $HOME/sciflo/ops/tosca/settings.cfg \
+ && sudo rm -rf /var/cache/yum \
+ && rm -rf $HOME/.cache
 
 # set entrypoint
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh

@@ -1,0 +1,2242 @@
+commit 4a318112e333feab51121c4ea8bef2d154c44f75
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 12 13:45:10 2017 +0000
+
+    use raw dem_type value for facet
+
+commit dce9c2a1c95df92978957100f95f87e1ccf505d5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Oct 11 23:19:01 2017 +0000
+
+    add dem_type facet
+
+commit 70e2b34d25b27c8653f6461acd74013f7247eb71
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Oct 9 22:57:13 2017 +0000
+
+    add azimuth and range look facets
+
+commit b4cc3b2a3733d234aa675f6d03d0d5226800e712
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Aug 11 23:32:04 2017 +0000
+
+    mstarch: fixing new feature cache message
+
+commit 6afb61bb1614f27c28d7273f594056ccff5a04a7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Aug 11 16:58:14 2017 +0000
+
+    mstarch: adding links to Dataset Downloads and My Jobs
+
+commit b7eb213e28494351a826a21be536da96648bd8d6
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 19:35:09 2017 +0000
+
+    handle unbound event handler to rules not visible: https://www.gyrocode.com/articles/jquery-datatables-why-click-event-handler-does-not-work/
+
+commit 2b325d2684d435a6cb1614b7c7a08666b8086d5a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jul 20 10:24:37 2017 -0700
+
+    propagate ops user through to rule creation
+
+commit 2250288d0abcd7a4d5b7fb28bd8be9f476dfeb90
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 16:03:40 2017 +0000
+
+    decrease font size and cellpadding for user rules list
+
+commit 22dd1790d50836cda611c07b8a88f55140237df1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 14:07:51 2017 +0000
+
+    move created and modified times to last columns
+
+commit 5767d52de89b6dc8ca6111a644f1bdaa42234408
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 03:31:06 2017 +0000
+
+    set default date for created and modified times
+
+commit cd9645cf30af6cb9d50d1b92ab7739b37fbafcf0
+Merge: a821cc2 873061c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 03:11:03 2017 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit 873061c6d4979e035e23cd15a95c482f367e0664
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 20 03:06:13 2017 +0000
+
+    use datatables API to delete rule; increase size of list_rules_modal
+
+commit b20d6c55aceabf96c2e5ffcf79a9a5e5068bca84
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 19 22:55:13 2017 +0000
+
+    use datatables for rule list
+
+commit 30f6092a63c59573faa6ea670c75281bec4d30ed
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 19 20:15:01 2017 +0000
+
+    add rule creation and modified time
+
+commit a821cc20ee22ce41494aa1f72733425190f8d525
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Jul 17 18:33:07 2017 +0000
+
+    mstarch: firewall if sub-apps don't exist
+
+commit cfaecc0c6d03979a6fab2779e37d3d5f25ade8f5
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Jul 17 18:26:20 2017 +0000
+
+    mstarch: my_jobs and my_downloads integration
+
+commit e9189c2b1fc1576b60abef882a587d6f8e23ba8c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 13 19:40:00 2017 +0000
+
+    show support link and modal; show "Jobs" link if ops user
+
+commit 4acf675931bd99e4a56db9489457accfa5c2a734
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 12 14:39:26 2017 +0000
+
+    sort actions by labels ignoring case
+
+commit d2a1719557d9bdb12c9bd20feb1ee0cb984268ec
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jul 10 17:58:12 2017 +0000
+
+    increase facet size for type and dataset
+
+commit d1eac9b376642f56e67e3e0abd40f7dc3ab994f8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 19 15:41:30 2017 +0000
+
+    disable provenance button until updated to v2
+
+commit 8735c1701784c490ab7d1db392119b82c9db88eb
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jun 14 23:18:33 2017 +0000
+
+    add option to specify and show title badge
+
+commit f5d5ca9c929fe051b2bde8854b4bdacf10653888
+Author: M Starch <Michael..D.Starch@jpl.nasa.gov>
+Date:   Wed May 31 19:30:13 2017 +0000
+
+    mstarch: turning grayed-out options into hidden options
+
+commit 568666ccec30bc1f5dfd885d14ad226bd6f138e7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue May 30 14:09:32 2017 +0000
+
+    template tosca title value
+
+commit 447a22c96c95faa142d05a1596e33bda2d71fc71
+Author: M Starch <Michael..D.Starch@jpl.nasa.gov>
+Date:   Wed May 17 23:40:49 2017 +0000
+
+    mstarch: products w/o geolocation don't break facetview
+
+commit ca78f55d6b3ab17edf778c3f6b61c38ed5891aab
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon May 8 17:40:13 2017 +0000
+
+    add within option to location search map to filter on docs with polygons that are within query polygon
+
+commit d7dc260b17739384478e2b692a98d56ec9850170
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu May 4 15:55:20 2017 +0000
+
+    mstarch: fixing boolean-enumerable problem
+
+commit 87d00054ba207602c711305c83e2f9f85d8c7434
+Author: jlinick <Justin.P.Linick@jpl.nasa.gov>
+Date:   Tue May 2 21:24:38 2017 +0000
+
+    add bugfix version of leaflet
+
+commit a2fbdfe074be732e6311a8d737da16e1b906eb8b
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Apr 20 00:13:09 2017 +0000
+
+    mstarch: fixing FIGARO_URL
+
+commit 498709ca29dea8caf1742b04149bb8cc61039736
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Apr 19 23:43:31 2017 +0000
+
+    mstarch: fixing re match up to ':'
+
+commit 39c982d283ea20fcaf686a4ec3e839839d0ec581
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Apr 19 23:36:16 2017 +0000
+
+    mstarch: fixing syntax error
+
+commit 0913585a5941991336ad853d99cb73a65bf5ea0f
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Apr 19 23:31:04 2017 +0000
+
+    mstarch: reading regexes instead of version_substring
+
+commit ae94e4b1ca3235921ccd476c54221624302055a7
+Merge: 26e660d b32ac3a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Apr 19 16:40:50 2017 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-special-inputs
+
+commit 26e660db15b004bb4947b65fb425b45eae97b72a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Apr 19 16:40:19 2017 +0000
+
+    mstarch: fixing Jobs link
+
+commit b32ac3a6b9e3d9f6a5caed13571e1c9d4b514a8e
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Apr 13 16:13:15 2017 +0000
+
+    handle "+" in dataset IDs
+
+commit b0a6f228485746d766cc3f75f7f9ee02ded4dd18
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Apr 11 16:32:43 2017 +0000
+
+    mstarch: fixing optional inputs
+
+commit f4df4d572999bc328d8eb44f139ab1a7e5522f37
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Apr 10 22:39:52 2017 +0000
+
+    mstarch: working special-inputs
+
+commit efea12708358c7202434dddf60bd040a54230795
+Merge: 12cff62 b28ed5c
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Apr 10 15:44:41 2017 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-special-inputs
+
+commit b28ed5ca892dc6b2ed261a521c989bf7f34d2b20
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Sat Apr 8 21:10:29 2017 +0000
+
+    allow for lists of LDAP groups
+
+commit 010eb38d8d6d31621107f999adad366b2f28b060
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Apr 6 21:56:06 2017 +0000
+
+    add bellini-dav (needs to be fixed in the future)
+
+commit 36e400343c5389ee4ae6859d599566cdeaa9895b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 24 23:39:51 2017 +0000
+
+    update Leaflet.draw to 0.4.9 (bug fixes)
+
+commit a72ea4c9818383747e02090608bc89e2c7877833
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 24 23:07:06 2017 +0000
+
+    update to leaflet-1.0.3 (bug fix release)
+
+commit c272a8d1f274de642420ab7becc452a26978dbd1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 24 22:28:07 2017 +0000
+
+    disable showing global bbox location filter
+
+commit 203d25d537ea887e8fd61bce45357aae1de0435a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 24 22:13:54 2017 +0000
+
+    fix refesh bug when polygon is selected
+
+commit e4a4ec59f6ce302fdfeab21268edffc81a25799f
+Merge: e1bca68 0555fdf
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Mar 14 15:30:11 2017 +0000
+
+    Merge branch 'v2'
+
+commit 0555fdf484c99fe7d7e434df4771a5b744905827
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 10 23:50:07 2017 +0000
+
+    move type facet above dataset facet
+
+commit 9c1f60ce668c682478dfa630d78edb7ff7ac18c5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 27 22:13:02 2017 +0000
+
+    remove job submission queue and job spec
+
+commit e7162ad4ec320ecf34e8ae06dd27b3506ffabc47
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 27 21:29:04 2017 +0000
+
+    initial implementation of job iterator task call
+
+commit e1f7034ee6eeb234d2524d76d6fadf4a6b020d6a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 27 18:44:27 2017 +0000
+
+    fix docstring and remove debug print
+
+commit 4b66831e08ef68ba12177e86312fcad482e18a1c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 27 16:59:57 2017 +0000
+
+    optimize get_action_spec() and related library calls
+    
+    Fix template values.
+
+commit 843b46caf9f030101ce7e400acb31784167af954
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Feb 24 05:20:30 2017 +0000
+
+    undo fix
+
+commit 5aab06dec85068df2722c1ef14300341680f5621
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Feb 24 00:29:38 2017 +0000
+
+    update query payload to handle updates in job iterator
+
+commit 07640fa2ff95eeb678e54f24405995d2c28ebaf8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Feb 17 00:37:00 2017 +0000
+
+    fix feature not carried over from v1: show tiles layer
+
+commit 12cff627e917b8d643a3bbcb8daf040701854f27
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Feb 16 03:11:23 2017 +0000
+
+    mstarch: removing geo validation without geo validator
+
+commit 31794874c47a049953f14b5ad75eac141c20bf3a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Feb 16 02:42:35 2017 +0000
+
+    mstarch: woring defaults, and multiple types
+
+commit 36fa285d0cce577e2297fb230ffbda4ea5542ac8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Feb 15 16:03:58 2017 +0000
+
+    make extractCoords() a recursive function to handle all GeoJSON cases
+
+commit 56c56c6b12bdf464e58ccb83c5bf53e92543cb21
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Feb 15 15:29:36 2017 +0000
+
+    add more processes to debug mode to handle REST calls to itself
+
+commit 9cc88cf804568c8be8b2eead5084e03c627c9607
+Merge: 899c610 da2bfa4
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 15 00:55:58 2017 +0000
+
+    Merge branch 'v2' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-special-inputs
+
+commit 899c610944df5e1dc6dee30f649eff3fcb40ca26
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 15 00:55:31 2017 +0000
+
+    mstarch: added region querying from faceted-region
+
+commit da2bfa4387d9b80fd22705a1bea102775921b1f8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Feb 14 19:32:24 2017 +0000
+
+    populate passthru_query and query_all; form proper query based on passthru_query
+
+commit b7c38251d255760713b361b6f5ac9e70734e3b68
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Feb 14 14:53:45 2017 +0000
+
+    restore correct query formation
+
+commit bb472424fc78c4ab98abbb84090158098cf0ce0a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Feb 14 00:50:51 2017 +0000
+
+    route jobs to correct queues: job-job-iterator to system-jobs-queue and action job to selected queue
+
+commit 3ab45a64dfe9e6c4819bc8adf466275a45ff35cb
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Feb 13 22:19:14 2017 +0000
+
+    mstarch: facetview points to new JS file
+
+commit c5b327c09fd98c7a10bf044082931906f79dff1f
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Feb 13 22:18:45 2017 +0000
+
+    mstarch: replaced inline JS with JS file for action building
+
+commit 311a95dd7dfc250884c4cfc3be5285ec503a4d1e
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Feb 13 20:48:31 2017 +0000
+
+    mstarch: extracting out form generator
+
+commit 0cc57666d53a64ce3113e9228092aed5095948f5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 13 19:09:40 2017 +0000
+
+    update debug mode to run on same port as ops web app without SSL context
+
+commit a22302476b30030e58cabb61518669ad2a8b2b87
+Merge: 731efb6 077a125
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 13 15:02:20 2017 +0000
+
+    Merge branch 'v2' of https://github.jpl.nasa.gov/hysds-org/tosca into v2
+
+commit 731efb6cefb2641caa4d6f93a09f4bf11324bc3c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 13 15:01:11 2017 +0000
+
+    fix incomplete rule
+
+commit 077a125b737af3ffdd0080e90448d60b6eabc2b5
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Fri Feb 10 22:27:36 2017 +0000
+
+    mstarch: better queue listing. Fixes: hysds-org/general#344
+
+commit e5e6e0742545fec29e2d51bbc5734a5ba72d03be
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Feb 9 01:05:42 2017 +0000
+
+    mstarch: reading queue object now hysds-org/general#344
+
+commit 278ffee9b576129edeea668ee93980e5e789a25e
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 8 23:42:30 2017 +0000
+
+    mstarch: keeping condition box always for triggers hysds-org/general#342
+
+commit 905179ef184a529de568b5490efe0637d02d68dd
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 8 23:21:01 2017 +0000
+
+    mstarch: removing condition for non-iterative jobs for hysds-org/general#342
+
+commit ecafee107286ce0c05dea303c7e0445f21993be4
+Merge: 248436a bfe213f
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 8 22:45:07 2017 +0000
+
+    Merge branch 'v2' of https://github.jpl.nasa.gov/hysds-org/tosca into v2
+
+commit 248436a0906b1f5c407d8635961b9308ffd74627
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 8 22:44:58 2017 +0000
+
+    mstarch: fixing labeling in rules interface
+
+commit bfe213f0f3a4bd4e11931f00bcb9828fdf32aef7
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Feb 6 18:24:46 2017 +0000
+
+    mstarch: abstracting templates for v2 style jobs
+
+commit 95271f7d5796cfe0bf1650eb02c3e06515f3aa95
+Merge: 9d703c3 0ab8cf1
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 1 23:33:50 2017 +0000
+
+    Merge branch 'v2' of https://github.jpl.nasa.gov/hysds-org/tosca into v2
+
+commit 9d703c3feb5852ba51fae2add9466bbd76045023
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 1 23:33:43 2017 +0000
+
+    mstarch: fixing queue listing
+
+commit 0ab8cf15fe8755ea4547f992e747ee7962c1c86f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jan 30 15:07:15 2017 +0000
+
+    use template to specify lightweight jobs spec in tosca config
+
+commit e2c2bc65efac69ff6286159d0ca5c3c9b5a2afb4
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 26 17:56:03 2017 +0000
+
+    sort action listing
+
+commit ceb6538bf557c9d71dadb9170150deaf727afb5c
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 25 18:49:05 2017 +0000
+
+    mstarch: bug fixes to on-demand queue listing
+
+commit 4e00f180eafb97dc9d86f0ee38ae242ee95e9ea2
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 25 18:14:42 2017 +0000
+
+    mstarch: making queue listing on demand
+
+commit e1bca68c04560b6c04916957ffde10c15e21e04a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 19 16:56:13 2017 +0000
+
+    add zip-delivery action
+
+commit 2e2b9a0b897097e7b1e0fb284a8d8eb5f1a411e1
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 19 03:48:06 2017 +0000
+
+    mstarch: kwargs as JSON string
+
+commit a37e9a48679bb8195eb4e357e9632a22fe5333a6
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 19 01:09:34 2017 +0000
+
+    mstarch: fixing remaining tosca bugs
+
+commit c5365e65836bb1ab3db86a7b050634d50ed164d8
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 19 00:37:46 2017 +0000
+
+    mstarch: removing evil :
+
+commit 83a93feaf4be614267e0be823115dd4fcdec45e4
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 18 21:43:27 2017 +0000
+
+    mstarch: eating dog-food in tosca, and adding queue to monitor rules
+
+commit b6f15d7f2973cdcd9d0468851f4d3eb4fa33a40a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 12 16:33:18 2017 +0000
+
+    add cleaner script for hysds_ios index
+
+commit 072717fc6bf23461c8bc0d179927d683e4f0f1c3
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 12 02:08:47 2017 +0000
+
+    mstarch: queue dialog for v2 always displayed
+
+commit 2c4e5f0627d4db122b9b1226c30bf7162c681fac
+Merge: 56bf2d1 420a8fa
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 12 00:16:18 2017 +0000
+
+    Merge branch 'v2-job-iterator-job' of https://github.jpl.nasa.gov/hysds-org/tosca into v2
+
+commit 420a8fa9839db486940d4ee52370669a16b4fffe
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 23:40:16 2017 +0000
+
+    mstarch: correcting template example
+
+commit abc968cc3fb5731864db8e7d465fa5a366e8adae
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 23:35:40 2017 +0000
+
+    mstarch: more configuration changes
+
+commit bb116abe54cc6277faba3182d359f3cd5c0a9a34
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 23:26:11 2017 +0000
+
+    mstarch: removing hard-coded job-spec
+
+commit 3442f166be6dc6eb64059e72629233e22e96fe7d
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 23:02:58 2017 +0000
+
+    mstarch: adding mozart_url to job-iterator-job submission
+
+commit 56287f14c5b53aa8104bdd519f5e4bf9287d0e1e
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 22:49:27 2017 +0000
+
+    mstarch: using hysds_commons and working job-iterator-job submission
+
+commit 05a42364e2c0a8559a525642ce69206b3ce5c24f
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 11 01:34:54 2017 +0000
+
+    mstarch: making job-iterator-job configurable
+
+commit 56bf2d18de80adc62977542e251f6abaff8c26fc
+Merge: 54cf647 b3c5d51
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 18:48:48 2017 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	setup.py
+
+commit b3c5d51852fef8fe0d2f8925d34ac6fbcc4e70ef
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 18:47:04 2017 +0000
+
+    remove celery 3.1.25 dependency link
+
+commit 54cf647947718033d0fb35d238eade03a8cfe091
+Merge: 1ed364a 885dbf0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 17:25:21 2017 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	setup.py
+
+commit 885dbf03f9b3444e080a2b5061de33ea171eaf99
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 17:23:27 2017 +0000
+
+    set dependency link for celery with priority queue support
+
+commit 1ed364a7ca0ec3aa4bcfac5d8449424358fd4759
+Merge: 12fee52 3900404
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 01:28:15 2017 +0000
+
+    Merge branch 'master' into v2
+
+commit 39004046510c862aaa2a22d75718a73416622906
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 10 01:24:10 2017 +0000
+
+    move selected filters and top pager above location map
+
+commit 12fee528dbce34ee9ac40ec0af010e7a37a69250
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 5 22:51:00 2017 +0000
+
+    mstarch: fixed new REST based communications
+
+commit 66abe4bacc8c06110d5c10882aff9e3b7b1fda11
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Jan 5 22:03:38 2017 +0000
+
+    mstarch: minor bug fixes
+
+commit 84fae72c03c390ff683b17e1b8bc97f1c04235a7
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 4 23:02:30 2017 +0000
+
+    mstarch: updating names for job_spec calls
+
+commit 4a4493c181ea90613a545502538dcecc4efc956d
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 4 22:51:53 2017 +0000
+
+    mstarch: fixing settings template to add GRQ_URL and minor bugs
+
+commit 297c0088e61f3e56d799c3ab923199d8d90bae22
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jan 4 21:59:55 2017 +0000
+
+    mstarch: tosca now uses HySDS libraries, and properly handles HySDS IOs
+
+commit 494bc193d70cf72de1a5c661548344ad5a0f2e6a
+Merge: 432f15b 0773d82
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jan 3 21:15:14 2017 +0000
+
+    Merge branch 'v2' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-container
+
+commit 432f15b95d2e802e019c020d32203b60974d7416
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jan 3 21:14:55 2017 +0000
+
+    mstarch: fixing queue duplicate listing issue
+
+commit 63049eeec52a0f0df02ac4c3f70887ede6c4f606
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jan 3 21:13:42 2017 +0000
+
+    mstarch: plumbing rule name into tags
+
+commit 0773d82772be92990ac8486158778d510c7e2387
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 27 23:07:37 2016 +0000
+
+    handle products and browse stored in google storage
+
+commit 4e8f4361e014939caaf1a33afa78353c7816c004
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 27 18:37:54 2016 +0000
+
+    restore using raw fields
+
+commit ee7b23bb773a56aaeb6008709c8e5dbb93986b60
+Merge: 5406305 b4da0e5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 21:42:48 2016 +0000
+
+    Merge branch 'v2' into v2-container
+
+commit b4da0e5381d6c6f73819a43357e2519b28e99796
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Dec 21 18:28:26 2016 +0000
+
+    mstarch+malarout: fixed missing brace in if statment causing tosca crash
+
+commit 5406305ecd12227ac26b9dd805611553214d0577
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Dec 21 18:28:26 2016 +0000
+
+    mstarch+malarout: fixed missing brace in if statment causing tosca crash
+
+commit 3530098029576a2d706b544f3edea1635b23ef85
+Merge: fcb0a76 2ad8468
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Dec 21 17:56:18 2016 +0000
+
+    Merge branch 'v2-container' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-container
+
+commit 2ad846830307c4c71ebded76583aea2b464e5a36
+Merge: c7636a3 8c18bd8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 17:54:49 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit 8c18bd89cee4e92a7f83c947642619f0f3742561
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 17:52:35 2016 +0000
+
+    fix issue with modal display in mapview
+    
+    Override default modal width by prefix "body" selector so that custom
+    modal CSS takes precedence over default values specified by bootstrap.
+
+commit c7636a3da586b584ab92116fd3dd7bb6e13e280c
+Merge: fc11d11 d8d999c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 01:26:51 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/static/facetview/jquery.facetview.js
+
+commit d8d999c7b38734d9a1757ca97d073aeb2da7552f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 01:20:34 2016 +0000
+
+    draw bbox only if not global
+
+commit 0f93940fd9afb5b48fe4384cd7464f81d5af1385
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 21 01:04:41 2016 +0000
+
+    increase location search map size and move controls below it
+
+commit fc11d11584f6574e4ff9fb77baf88c65f41dfd42
+Merge: 376d669 098c33d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 03:07:55 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/templates/facetview.html
+
+commit 098c33d26593f6f96d20495b2078872284f9da02
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 03:06:12 2016 +0000
+
+    add link in result leaflet popup as well
+
+commit 376d669c24c9d7f5e443fccf5237ac7698c5d2c8
+Merge: ac0e0d2 58929ff
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 03:03:33 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/templates/facetview.html
+
+commit 58929ffa07b9961feb7259db2abcad2cd4b0d99f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 03:01:25 2016 +0000
+
+    allow click on anywhere in the footprint
+
+commit ac0e0d2916f67b9d51746e8187abb300a28161b6
+Merge: ef2eddf d65a7c1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 02:46:13 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/templates/facetview.html
+
+commit d65a7c112b2cb6b2a8b4f310cc6356fb610c42ea
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 02:41:05 2016 +0000
+
+    link to faceted product in popup for product footprint
+
+commit 0c3706f7bedd35a4ac52c20b48eae140135d0bca
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 02:28:39 2016 +0000
+
+    decrease footprint shape weight to 1
+
+commit ef2eddfe85657cb34ea38946e01ba785c6286f96
+Merge: 78ea354 23c099d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 02:10:14 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/templates/facetview.html
+
+commit 23c099d96e7affac50cc98f2381f9ba1bda4db0b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 20 02:05:22 2016 +0000
+
+    show footprint shape of current results page on location search map
+
+commit 78ea354f150af61a83b800124001cf92c53a762a
+Merge: 16345db 273432a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Dec 16 20:58:00 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit 273432ab2aa462c585e35f2227f2efb6004a7ac0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Dec 16 20:56:01 2016 +0000
+
+    increase opacity of dataset tiles in mapview
+
+commit 16345db6cfa17261a03cc79d8f6f212984c66582
+Merge: 06b0033 a4d83db
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Dec 16 20:03:45 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit a4d83db56c4d3c623589540fa6da5fb0b205751d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Dec 16 19:59:33 2016 +0000
+
+    use arcgis basemap layer for browse leaflet and mapview
+    
+    Increase size of browse leaflet in mapview's list view.
+
+commit 06b0033be13787042cc2f5d4946479394471f7ed
+Merge: 5c34903 d99d402
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Dec 16 16:38:45 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit d99d402c3697f1153b23f4cffb25b60082692f13
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 23:25:42 2016 +0000
+
+    restore previous behavior of show all tiles on mouseout
+
+commit 5c34903fdec6d547f13ce7fd31b6e1b4ecb44c9a
+Merge: 6843578 43b317a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:58:15 2016 +0000
+
+    Merge branch 'master' into v2
+    
+    Conflicts:
+    	tosca/templates/facetview-aoi_filter.html
+
+commit 43b317a41380328aa4e1ab09332c9883e19ba0ba
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:54:08 2016 +0000
+
+    disable WMTS GetCapabilities call and Alex's custom leaflet lib
+    
+    Updated mapview to use latest leaflet 1.0.2.
+
+commit e358e4f6b0cb7c786c32097772ee0012f4719973
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:47:51 2016 +0000
+
+    remove all usages of old leaflet v0.6.2
+
+commit 684357824701cf682de3b4aa02f6ba1ccbf8d8e7
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Dec 15 22:41:00 2016 +0000
+
+    mstarch: adding missing +
+
+commit 1fd7f971e10c9e59c13ed1e2e58b4298aa49bb06
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:41:56 2016 +0000
+
+    add latest leaflet v1.0.2 for mapview interface
+
+commit fcb0a76e763751b23a1a39a2d0754441410ed263
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Dec 15 22:41:00 2016 +0000
+
+    mstarch: adding missing +
+
+commit 246a015efa4b60e063734a947e11f8e816d48fdf
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:33:47 2016 +0000
+
+    fix maxNativeZoom bug and remove opacity in browse leaflet
+    
+    Upgrade leaflet to 1.0.2.
+
+commit e991dbf926a37e41a2e16e0e168c668b5afa8d02
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 22:12:19 2016 +0000
+
+    detect if tileLayers is undefined
+
+commit 1a2f7242e850be440d1100d3dd3d2cad752e4cd5
+Merge: 7b115d8 62bdfe6
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Dec 15 22:08:39 2016 +0000
+
+    Merge branch 'v2-container' of https://github.jpl.nasa.gov/hysds-org/tosca into v2-container
+
+commit 62bdfe647eba694898747eca4c4101cb9fa5b0ff
+Merge: af42ba0 78ef26e
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 19:28:07 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit 78ef26ebeb2706323e748b44a351dcc9ca0ba5e3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Dec 15 19:25:37 2016 +0000
+
+    add ability to show multiple layers in dataset's tiles directory
+
+commit af42ba0081ea892f917310f1577aa778af9f515d
+Merge: e1b58d6 f6b701a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 23:50:59 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit f6b701ad69a1b4199ba9723bcef6486749456f34
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 23:49:31 2016 +0000
+
+    allow faceting on single dataset by clicking on ID in mapview tooltip
+
+commit e1b58d63099c838ec4f954aa1d5be445958aa4f8
+Merge: 7e54a63 dc2018b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 22:58:48 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit dc2018b3923ea998b8d710b51eb87c3bb566e499
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 22:54:42 2016 +0000
+
+    remove link to show browse images if clicked
+
+commit 7e54a637fe658cfb7b7cdfb03997477a2738e7c4
+Merge: 504193b 3e5fc9c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 22:39:39 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit 3e5fc9cbab57ff73d1d61e34a60756daebf588c3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 22:36:41 2016 +0000
+
+    lazy load browse images in mapview front card
+    
+    Restructure result set format for future implementation of excel view.
+
+commit e5a71a1aed82368cb8c09a5bed731e819d4b2430
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 16:37:22 2016 +0000
+
+    check that tile for imgid is defined
+
+commit 6c572e3a3052ffd52d51c6c31c00b5050cf4338b
+Merge: 0198912 cb3b699
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 06:41:17 2016 +0000
+
+    Merge branch 'master' of github.jpl.nasa.gov:hysds-org/tosca
+
+commit 504193b4b576c8e2dac833c9de172237c7c845ea
+Merge: da44f45 a3e68d7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 06:35:20 2016 +0000
+
+    Merge branch 'v2-container' into v2
+
+commit da44f45649bed069c05b0ee068db5219a90a1077
+Merge: e545f23 cb3b699
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 06:32:41 2016 +0000
+
+    Merge branch 'master' into test-merge
+    
+    Conflicts:
+    	tosca/templates/facetview.html
+    	tosca/templates/facetview_gibs.html
+
+commit cb3b699a251c0f2bbd8475ad2fb698a99973ccfe
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 06:24:18 2016 +0000
+
+    center location_search_map on last tile layer
+
+commit 0198912533b7d233011ac260c38a134960534728
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Dec 14 00:19:17 2016 +0000
+
+    mstarch: adding an add-tile action
+
+commit 2732cf55092c9d95d6fe77d23386f7cf0263f850
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 13 21:54:53 2016 +0000
+
+    disable terms of use modal on mapview
+
+commit 4a6074877c76d032a782bb8f893e25404dc609e0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 13 21:42:00 2016 +0000
+
+    improve mapview interface
+    
+    Center location_search_map.
+    Isolate tile image when hovering over image in grid menu.
+    Fix icons.
+
+commit 7b115d8a7b157159236e5e55755a97f383b7c78e
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Dec 13 20:32:33 2016 +0000
+
+    mstarch: fixing V1 facetview items
+
+commit db84ada2b52107e772d653bb8cca50a014fc8293
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 13 19:40:05 2016 +0000
+
+    display tiles in top leaflet map
+    
+    Update mapview as well.
+    Improve browser performance by limiting tiles by bounds.
+    Set opacity of browse images on mapview to 0 to show tiles instead.
+
+commit 052acc7681341fa8feb21b05f2802dcb09b3466a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 13 05:57:50 2016 +0000
+
+    various updates to mapview
+    
+    Sync facets and functionality from default FacetView interface.
+    Update mapview to show tiles.
+
+commit 9e056a753d09b020ab2491a9f774206af239f0cf
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Sun Dec 11 01:16:23 2016 +0000
+
+    set tile opacity to .6
+
+commit 4c7ba7b6fb0a98fbefb8be51d59d88f3ae358f3b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Sun Dec 11 00:34:24 2016 +0000
+
+    overlay tile in leaflet preview if exists in product
+    
+    Remove fill on the drawn product bbox.
+
+commit a3e68d7ee872a3e98ab54f58dcf74c76e09e7f4c
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Fri Dec 9 01:58:39 2016 +0000
+
+    mstarch: fixing passthrough
+
+commit e545f23187add58019b2ce8c8115d46083487d73
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Dec 6 19:25:09 2016 +0000
+
+    mstarch: tosca improvments
+
+commit ba68462135e83f5454402a4ec46bcb920366d6f9
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Nov 17 21:05:57 2016 +0000
+
+    add option to specify recent day's scenes as master
+
+commit c26abc9695363d9a91384ac5bf990c24425397b9
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 17 03:13:14 2016 +0000
+
+    mstarch: working tosca job submit for non-passthrough items
+
+commit 488668212d4233c690f3f5439aa4e4413fbb094d
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 17 02:40:32 2016 +0000
+
+    mstarch: job submit doesn't fully error
+
+commit 0b0dd1208d803090751ad7ae31ca64f91721b3bf
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 17 01:43:18 2016 +0000
+
+    mstarch: fixing startup problem
+
+commit 7fde712b995611284150fbd3919537962ca0e955
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 17 01:34:49 2016 +0000
+
+    mstarch: test pointing at REST API
+
+commit 85d1a685a24b5dad2bc03e6016d2563b83f21c69
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Nov 15 05:50:51 2016 +0000
+
+    mstarch: fixing value localize
+
+commit 9298a93324b5a1f31001525ef8a05e90f45b8132
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Nov 15 04:39:00 2016 +0000
+
+    mstarch: more temporary tosca fixes
+
+commit cb603ccce48d0232ff961a40c55026e20eb34d14
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Nov 14 23:52:05 2016 +0000
+
+    mstarch: factetview works with non-geolocated products
+
+commit cff830df3c76ff3e88fdef34af138a2c878670f0
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Nov 14 17:57:38 2016 +0000
+
+    mstarch: adding in job_json creation
+
+commit 1121cfb182a075fd4b1da68883d8cc93c6068640
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Fri Nov 11 00:43:35 2016 +0000
+
+    mstarch: adding in extra params
+
+commit 445e32d40d32a3a3d03a6c11c573fc13c0bd3eee
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Fri Nov 11 00:33:04 2016 +0000
+
+    mstarch: adding needed job_type and specification to action
+
+commit 1bf77d067ee41885ed498edadeeb5dee707f57db
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Fri Nov 11 00:25:39 2016 +0000
+
+    mstarch: prototype arfument and job processing, but not tied in
+
+commit 5270b9a9c98ad71b2bee3b3c72266ff9139eb046
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 10 22:38:51 2016 +0000
+
+    mstarch: working displays, not working submissions
+
+commit c4b0c4bcf71783bc72f1b4bef004c92f1449dbe7
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 10 21:04:29 2016 +0000
+
+    mstarch: adding in queue dropdown
+
+commit 6bb2e9e91c5e636e567bcb0ca38d65847990be70
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 10 19:34:54 2016 +0000
+
+    mstarch: initial implementation of actions from jobs/containers
+
+commit d17f3dc1686f9c6e78fea19b158dafa3d0de77a0
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 10 17:39:31 2016 +0000
+
+    mstarch: adding in settings for container/job listings
+
+commit 9df0a360096f98f1629eed07011b37e48f02d367
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Nov 10 17:05:59 2016 +0000
+
+    mstarch: initial container develop
+
+commit d6b9d1a50fe690f4343a2798405cef87f81277d2
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Nov 8 15:53:58 2016 +0000
+
+    generalize templates for trinity
+
+commit b2567b02cb4fe6f3e60d74e6f8c424ad9f21eaf0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Nov 7 19:31:10 2016 +0000
+
+    initial implementation of nomenclature change from "product" to "dataset"
+
+commit 156d0dd508bbb5f1575c23d450a2b7d8d494fd28
+Merge: b110af2 b3b95d8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Oct 18 14:45:19 2016 +0000
+
+    Merge branch 'master' into v2
+
+commit b3b95d8da747c8beb94c7f1b2845c6ee57713756
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Oct 18 14:40:35 2016 +0000
+
+    create correct overlay coordinates from bbox
+
+commit b110af2245657f438396b877b22030fd93ce16c0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Oct 17 19:26:05 2016 +0000
+
+    update reqs
+
+commit dbd102615c8cf6b83a035e579dca93008506f61f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Oct 17 18:12:50 2016 +0000
+
+    remove pyes req
+
+commit fabc0ef36aeda6fad1b50a890e61a4b8101e05b1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Oct 17 17:20:58 2016 +0000
+
+    update names of facets to open up by default
+
+commit 9476ce8f880527fecd8f5ad53fa0b5d46c3718b8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Oct 17 14:26:57 2016 +0000
+
+    allow modification of polygon textarea to update shape
+
+commit 1b53233972293a195a9a1b49996a0158e7dd22b8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 13 20:20:19 2016 +0000
+
+    generalize location filter interace to allow polygon
+    
+    Disable unsupported leaflet draw features: remove, polyline, and markers.
+
+commit 8e5c9730d2634357e745a0250e438db17accc091
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 13 17:56:34 2016 +0000
+
+    cleanup and remove aoi_filter hack
+
+commit 09f331d92110ed1f45abfb6ec4a645d3b1e2e88a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 13 17:44:45 2016 +0000
+
+    initial update of field names for v2 metadata
+
+commit 31113a55d730e9cfd8622ceb14308cb7bc4dccd2
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Oct 12 13:59:38 2016 +0000
+
+    add trailing / to prevent wget from mirroring adjacent products
+
+commit 1012b3bd00634d1840dd992aa882e38f51892455
+Merge: 400b520 fa2636a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Oct 10 16:05:44 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit fa2636a64616137629bf98df7ddf80e136335560
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Sat Oct 8 02:53:37 2016 +0000
+
+    add bellini-dav support
+
+commit 23e3b5d4a76c43883fb42bf04d5ff374b93208c9
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 28 21:27:06 2016 +0000
+
+    update monitor form for time-series
+
+commit 5f5daa08808d2fc9666bcade725a7f1f945611c1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 28 14:08:14 2016 +0000
+
+    add new time-series parameters
+
+commit 400b5207dee2935756ba5ea5f9dd536a322615fe
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Sep 27 19:34:42 2016 +0000
+
+    mstarch: fixed ML display, added AOI/Event information
+
+commit 8befb31ecbb4f942a26889d1de19ad20c02cf8c7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Sep 23 01:17:26 2016 +0000
+
+    use timestep_count for timestep facet
+
+commit d3c858d2a8bf219199ec718a31ede93edeb36f27
+Merge: 6023439 871db09
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Sep 22 23:39:41 2016 +0000
+
+    Merge branch 'master' of github.jpl.nasa.gov:hysds-org/tosca
+
+commit 6023439204ad66059fb79b38e200639153cfd970
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu Sep 22 23:38:46 2016 +0000
+
+    mstarch: fixing faceted search to use visualization-url
+
+commit 871db09a6bcc8ab081f19906cb6586aeb6deaec5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Sep 19 20:55:48 2016 +0000
+
+    use better facet label
+
+commit 70fb12e1a4f8fbc753ec7a8ed691741e4b34455f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Sep 15 03:23:48 2016 +0000
+
+    add option to allow querying of all results from a monitor rule
+
+commit fd4f571572d79b30c10a8f7e9940a44c1adf0fdc
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Sep 15 02:41:11 2016 +0000
+
+    add monitor action for time-series
+
+commit 091a45fbb887d47ff99a810b65a8be86d3fc1b57
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Sep 13 18:41:36 2016 +0000
+
+    update action name for S1A and S1B
+
+commit 14b8204c74a8a889230ee9394447aaf1146f7cff
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Sep 13 16:48:10 2016 +0000
+
+    add facet for time-series products: input interferogram count
+
+commit 3e606e09432b324fa9fee1f142eb4516bee9c07c
+Author: Michael Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Sep 12 22:53:52 2016 +0000
+
+    mstarch: removing visible import/export and phase-unwrapping
+
+commit 3f8a083140b3d9a4d8e162c499a55354662a4205
+Merge: a2f1e10 e9b9c00
+Author: Michael Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Sep 12 22:27:48 2016 +0000
+
+    Merge branch 'mstarch-dev'
+
+commit e9b9c008a98864f2ed1a9e81b3720db5c0bffd90
+Author: Michael Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Sep 12 22:21:43 2016 +0000
+
+    mstarch: adding in ts-ingest action and corrected leaflet link
+
+commit a2f1e106c565f9f0b9c7d58997ba2402f8418d11
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Sep 12 15:38:26 2016 +0000
+
+    update time-series params
+
+commit a2e85a1dfba416480c7fa3f8d3c42a53f5d5be8e
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Aug 29 15:47:56 2016 +0000
+
+    add singlesceneOnly parameter
+
+commit a890a73d07509144876e2e46c527f87355a82cd5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Aug 8 23:06:11 2016 +0000
+
+    add S1A single-scene/stitched coherence product action
+
+commit d72a38f1839f95211729bddc6806f786b8ce8532
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Jul 29 02:56:30 2016 +0000
+
+    add capability to restore bbox filter from base64-encoded URL
+
+commit 5e4e9e5f786d2901a780897776d3b26acfd93a15
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 28 20:34:32 2016 +0000
+
+    provide base64-encoded query URL for sharing
+
+commit f4442b064be8d2b80eb724e0c0655d820a5a5b8b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jul 28 16:46:26 2016 +0000
+
+    enable base64-encoded query capability
+
+commit 962a8513c4b2edc48cf1e80caa3786de2dabd6dc
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 27 22:07:32 2016 +0000
+
+    set start/stop time facets to starttime/endtime values instead of metadata.sensingStart/sensingStop
+
+commit cd611a1cbc5dc29ea9115f6d05c976db372327b2
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 27 21:19:19 2016 +0000
+
+    add sorting results by standard starttime/endtime instead of sensingStart/sensingStop
+
+commit c4f8c3f1859f0abc2a7d925a825e4e2af8152645
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 27 20:59:57 2016 +0000
+
+    add sorting results by sensing start or stop time
+
+commit 4ccc47697e4839af8104020ecac2c6544c11f602
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jul 25 07:41:43 2016 -0700
+
+    fix on-demand and trigger rules buttons at the bottom
+
+commit c6f84b78b5bbef2291cae83981135d544c8a8dc5
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jul 12 16:18:48 2016 +0000
+
+    mstarch: merging queries
+
+commit f7ca2e8536be5f9048fdbabdc31304d1dd9ae3fd
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jul 11 16:14:36 2016 +0000
+
+    fix bug where params with same name in different actions clash validation objects
+
+commit 2be7cde7cdb419c53eb83874b88b6508aa2cf15d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jul 11 15:35:52 2016 +0000
+
+    remove auto_bbox param; add subswath facet
+
+commit d01c84c9347de8224f07c7817bf591ecc09bb0f1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Jun 24 06:41:39 2016 +0000
+
+    add auto_bbox param to monitor action; reorder params
+
+commit ce3a06cc68d898de7da664f7ce2ccd86fff67b14
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jun 22 16:34:51 2016 +0000
+
+    mstarch: fixing visualize vizualization of button
+
+commit ac50d5718bb657877f9603f484c6cfc8c6ee5330
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jun 21 21:02:00 2016 +0000
+
+    mstarch: timeseries fixes
+
+commit 24cea0f9679a3d71be230be46ff10257a28914fc
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jun 21 20:52:46 2016 +0000
+
+    mstarch: better phase-bucketing
+
+commit bd838f67b90c750817e51ac041e38d9e6ac5122a
+Merge: da426f9 d1194e4
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jun 21 20:10:37 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca into mstarch-dev
+
+commit da426f92e4db960ed9a307d6eb6bbc45dd482ac5
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue Jun 21 16:40:40 2016 +0000
+
+    mstarch: links to visualize, and working ML
+
+commit a60dd31bbfe609e1cc757459dbed311f66bf5088
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Jun 15 22:04:53 2016 +0000
+
+    mstarch: visualize button for leaflet timeseries
+
+commit d1194e401ea6f36276538885fb36cb402b8df2cd
+Merge: f02a5e8 f0b9d24
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jun 14 02:03:32 2016 +0000
+
+    Merge branch 'mcayanan-dev' into master-test-update
+
+commit f02a5e8b540494438c807147ff2bc6a21752787e
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 13 17:37:54 2016 +0000
+
+    merge in mcayanan's updates
+
+commit f0b9d247e1742c34c602e136b7a99265499f4134
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Mon Jun 13 17:36:40 2016 +0000
+
+    Remove assumption of browse.png
+
+commit 4e7f2a66d02694c8ad3e869c67cb4f4c2f64c12a
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Mon Jun 13 17:33:57 2016 +0000
+
+    Update facetview aoi template
+
+commit a0a9ea25a8e336dda81f78ab60a791e7eb5f89d8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 13 14:31:48 2016 +0000
+
+    temporarily disable baseline values until extracted from S1A
+
+commit 968b0a89e1d6ce626ca89c66a6eb685bd58a6a02
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jun 9 17:06:54 2016 +0000
+
+    add auto_bbox parameter
+
+commit 9856149545aed4cbcf3ffa6d970d67faee5a24f3
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Jun 8 16:12:25 2016 +0000
+
+    Added source_archive and source_datatype to the list of facets to filter on.
+
+commit 8618050285f7b77413563378d8439d610d94a8f4
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jun 8 04:14:18 2016 +0000
+
+    save passthru query flag to enable execution in user_rules_product
+
+commit db37bec66caad07cb8fac6050eff7257e96786e3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jun 8 01:10:01 2016 +0000
+
+    unify S1A single-scene and stitched IFG pipeline actions
+
+commit 75d98afc3d972d6adbc8eaff674fbe2a2f5fa5ac
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Thu May 26 13:19:07 2016 +0000
+
+    Remove console log messages
+
+commit f3368b2056dc7c59602db82a54a270eec12cca3a
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Thu May 26 05:19:48 2016 +0000
+
+    Update to support datasets with no browse images
+
+commit 3041a89258eddafe82e9dda66fb1777c42e3a93b
+Merge: 869140a 2832d14
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed May 25 18:15:21 2016 +0000
+
+    Merge branch 'master' into mcayanan-dev
+
+commit 1dc36d16adbb63c38bc24e25499747aeadf69885
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed May 25 18:09:45 2016 +0000
+
+    remove browse.png assumption
+
+commit 644fb28b7bbfc877b5998033f040ffd0b6441a64
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue May 24 14:36:30 2016 +0000
+
+    add scene_count facet
+
+commit 3ca4a32b75bd5fc9ea8eec35b610a3a34063399b
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue May 24 13:14:57 2016 +0000
+
+    change var name to temporalBaseline (similar to vanilla ISCE flows); default to 72 days (per Piyush)
+
+commit 491891fc5b71fd011a2edd65a6b18d3c88c5ad50
+Merge: 34d602c bd0ab85
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue May 24 01:25:37 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca into mstarch-dev
+
+commit 34d602cf6aa105803907a29443708bcb3e85d44b
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Tue May 24 01:25:34 2016 +0000
+
+    mstarch: negating facet
+
+commit fcb46b3f75ca60cca2acd2dd8012a146bbde77bc
+Merge: dd2bc33 5273676
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon May 23 20:44:37 2016 +0000
+
+    Merge branch 'mstarch-dev' of https://github.jpl.nasa.gov/hysds-org/tosca into mstarch-dev
+
+commit dd2bc33ec6c8dc54385e11bd3dd404fc734c9aa7
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon May 23 20:44:29 2016 +0000
+
+    mstarch: predictor dropdown
+
+commit 5273676fe831352690e63c2b1b28b03b8bdc13ca
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon May 23 20:41:45 2016 +0000
+
+    mstarch: adding in phase unwrapping
+
+commit bd0ab85360f477d685b4c3e02c4f2752bf6e6142
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Sat May 21 19:45:13 2016 +0000
+
+    allow specifying temporal span threshold
+
+commit 2832d14838007289f2aaf4048b4aacc524453f98
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri May 20 19:17:13 2016 +0000
+
+    add action for new single-scene/stitched S1A IFG pipeline
+
+commit 1febf5a261b09b317ac9c2a8641c143e2a7a1086
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri May 20 16:10:18 2016 +0000
+
+    remove outdated tophat links; sync templates
+
+commit 28e400ffcaf0a87aff6f491e8e333a75753559f0
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu May 19 23:27:58 2016 +0000
+
+    even more reordering and collapsing
+
+commit 453bd8cb48fbd2c7bd3539c0d07f3bbcef2d1826
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu May 19 22:55:18 2016 +0000
+
+    more reordering
+
+commit 6550fdc5194f5205be172b4617fd8ebce9d23c99
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu May 19 22:28:52 2016 +0000
+
+    reorder facets; collapse start/stop time facets
+
+commit 4b0110b5ab5b3876c2ea232caa68e38004f909ac
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu May 19 21:34:54 2016 +0000
+
+    remove product priority facet
+
+commit f58b9407cfe927ccd3ad888f138f6458a268c575
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed May 18 18:55:55 2016 +0000
+
+    update terms of use; use <pre> instead of <p> to display
+
+commit 4aaf1551aa9ea495702a9f3cfb5b679e75e86f73
+Merge: 289305c bc56bf4
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed May 18 18:07:53 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit bc56bf4fcc12afd337f3ad0af4e3d75f1e0a37b7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed May 18 15:38:18 2016 +0000
+
+    add support for outside accounts
+
+commit 612b22172384c38e532e12185a87bb86a9177928
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed May 18 08:21:48 2016 -0700
+
+    add terms of use for aria-search
+
+commit 35a0a2aad7b01de239d837ddc81231927378ee49
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed May 18 14:37:53 2016 +0000
+
+    implement terms of use modal
+
+commit 869140a5f668a56c15754758c9a0e20a6368c9a2
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Tue May 17 22:09:20 2016 +0000
+
+    Add extractor action
+
+commit 289305ca49df4332bb146f412de9809c59d2e8ad
+Merge: e64045b 26df224
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Thu May 5 23:32:43 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit 26df22454129c99e7ba48a03cae060e7486b5abf
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Apr 20 14:47:30 2016 -0700
+
+    handle redirection for all paths
+
+commit aeffbcc10142ffd7ec21feb64beaebb236f9c1c6
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Apr 20 13:20:18 2016 -0700
+
+    remove unecesary modal title
+
+commit 48891ccd1ba5dc46bf7ede41e75c7840a5c40a5d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Apr 20 13:16:34 2016 -0700
+
+    rename Process/Monitor Results to On-Demand/Trigger Rules
+
+commit d679adedc61968369516b3af5a391a134dcb4d6b
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Apr 20 19:02:22 2016 +0000
+
+    add password info for aria-csk-dav
+
+commit 97214c0b8262c62ea1629e77ddd5cedf0531e108
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Apr 20 18:12:05 2016 +0000
+
+    check for hysds-aria-products.s3-website instead of just s3
+
+commit f255e888890bbcf68fe0d86178cd34e819c2729f
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Apr 20 18:02:41 2016 +0000
+
+    update logic to be more generic in determining cut-dirs value for s3 links
+
+commit 69e19080bb4d5dd4434769fbd3626af201fa98bf
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Apr 20 02:23:26 2016 +0000
+
+    Change processing to downloading
+
+commit ab9f9bd64ceee3d081e5f70f8624c9d3ccc3cd50
+Author: mcayanan <michael.cayanan@jpl.nasa.gov>
+Date:   Wed Apr 20 02:03:49 2016 +0000
+
+    Resolved hysds-org 134: fix compatibility of wget with s3 index-style
+
+commit 6bcd20a5075ed629456d210a5705309b6be36f55
+Merge: 3c63b57 53a9850
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Apr 18 23:28:19 2016 +0000
+
+    Merge branch 'master' into aria-branch
+
+commit 53a98506e4dea08606d40d817db47b74bfdf7062
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Apr 18 23:26:37 2016 +0000
+
+    revert aoi_filter interface
+
+commit e64045b2d788308023413f2dc5ce6a63f2dd3cf6
+Merge: 2d794a9 d1e4a0a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Apr 18 19:54:56 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit 2d794a937ad7df76f627280852afd4b2ccb05a9d
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Apr 18 19:54:47 2016 +0000
+
+    mstarch: adding rule importer/exporter
+
+commit d1e4a0aa6b8e528d41c3d88c0e61871fb6abcd1d
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Apr 18 17:57:04 2016 +0000
+
+    implement AOI filtering correctly
+
+commit 8c29e2d13b71be01d97c2273e44165be3ef63003
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Apr 18 16:36:36 2016 +0000
+
+    enable AOI filtering in "Process Results"
+
+commit 93cc2b9c35e99ebcc62812975e748f5df23eb03a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Apr 18 15:17:01 2016 +0000
+
+    add AOI filtering capability
+
+commit 3c63b57e92bdb1b345f36a8bc2db845252094e47
+Merge: 14755dd 8da0375
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Apr 12 19:12:39 2016 +0000
+
+    Merge branch 'master' into aria-branch
+
+commit 53d146f0502316f1d851561ab324f6d2b49be365
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Apr 12 19:08:40 2016 +0000
+
+    cleanup whitespace
+
+commit 8da0375e68d6e88a98a2aaf093b4a45b9989e0c3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Apr 12 18:55:53 2016 +0000
+
+    add dataset redirect service
+    
+    cleanup custom url filtering for dap, browse, and dataset urls
+
+commit 14755dd34dc218000c36d3ba7036eba0eac6da35
+Merge: 61b1fac 84e0310
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Apr 12 16:41:42 2016 +0000
+
+    Merge branch 'master' into aria-branch
+    
+    Conflicts:
+    	tosca/services/query.py
+
+commit 84e031026fe1724d11e95e1f58073b617ca8a90f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Apr 12 16:37:53 2016 +0000
+
+    factor out ES query
+
+commit 61b1face9f4b7096405d9f7e8525f0533c2e0d5a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Apr 6 08:37:46 2016 -0700
+
+    use S3 website url for product browse link
+
+commit 4dee16a1d220243dd221f2683cd79d351ecdcee2
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Mar 30 03:23:29 2016 +0000
+
+    add rsync_push action; remove sftp_push action
+
+commit d18dce94ad577eeef0bde8c7efb419c8d7e6d4ab
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Mar 30 03:22:30 2016 +0000
+
+    add rsync_push action; remove sftp_push action
+
+commit 015d07a4bdd3b04dd65d4ae7840ac4350617ac0a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 21 15:51:23 2016 +0000
+
+    fix remaining broken links; add google analytics tracking
+
+commit ea388dbd2768e38c35f4c5b348dbdc6e8ebb7a77
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 21 08:48:23 2016 -0700
+
+    fix remaining broken links; add google analytics tracking
+
+commit f5d0c6609d331e634211b2e7f8420eb4234c6343
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Mar 15 11:58:05 2016 -0700
+
+    use JPL template for login; filter for s3 product and browse urls
+
+commit 6885fcc03904c15979780519c0116b130350ec41
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 20:16:07 2016 +0000
+
+    add run_predictor arg to specify predictor_model to use
+
+commit a2fac39e9d71a2a9b62c74d8b3bf5ca5230d0191
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 20:15:22 2016 +0000
+
+    add run_predictor arg to specify predictor_model to use
+
+commit 273a372cbb5c50cef07d460078a8723a4216dc1a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 20:11:54 2016 +0000
+
+    add run_predictor action
+
+commit e5d45c05705948fc951be1136eeb39ac55b6f905
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 20:10:02 2016 +0000
+
+    add run_predictor action
+
+commit d1c60c64025138e413256a26b982f2fda7a556b6
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 14:13:52 2016 +0000
+
+    fix robots.txt
+
+commit 6c617e4e94e9565b8a3f4a95c5ab78d801691487
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 14 07:02:48 2016 -0700
+
+    fix robots.txt
+
+commit fcb20ad6c5bd05211e950d73e54650c1cea2ae7b
+Merge: 3220148 203ac22
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 11 18:31:32 2016 +0000
+
+    Merge branch 'master' into aria-branch
+
+commit 203ac2247fef20bb6f76865c7606d7a15c54ff5e
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 11 18:29:38 2016 +0000
+
+    add train_predictor action
+
+commit d8c6ba7add60c8f6ee425f146b905771165ec68a
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 11 17:47:16 2016 +0000
+
+    fix accessibility issues on JPL login page; add robots.txt and sitemap.xml
+
+commit 322014826d921f6adb5e00b563953d4f7d644702
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Mar 11 09:43:49 2016 -0800
+
+    fix accessibility issues on JPL login page; add robots.txt and sitemap.xml
+
+commit da4aaaf44fc5717c3aab9defb08919dd81a64e13
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 10 07:19:33 2016 -0800
+
+    update credits
+
+commit a735ce303b205743732d2e1d8b91e7a3ba8c4659
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 10 07:19:33 2016 -0800
+
+    update credits
+
+commit c7a70133e89217df3852da9806729cf9c70648fd
+Merge: 10465c9 b985563
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Mar 7 22:30:38 2016 +0000
+
+    Merge branch 'master' into aria-branch
+
+commit f469dd6a2e655f9013df663997137ae18f401b5a
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Mar 7 22:30:08 2016 +0000
+
+    mstarch: added action for UAVSAR for OPS
+
+commit b985563c6191c04073729b9d7d24abfc2752c02f
+Merge: 2fce2cf cf54be1
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Mon Mar 7 19:38:35 2016 +0000
+
+    Merge branch 'master' of https://github.jpl.nasa.gov/hysds-org/tosca
+
+commit cf54be1183a548f2ea900301f9a520c28629d0a1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 3 12:27:47 2016 -0800
+
+    add jpl-style login page
+
+commit 10465c95ae840124a01857ade98a47d40274ba9f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 3 12:27:47 2016 -0800
+
+    add jpl-style login page
+
+commit 026e7e34a1e5ee8c7050a12bfd22b52c40c0ce71
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 3 09:44:36 2016 -0800
+
+    initial integration of JPL style, logos, etc.
+
+commit 224b0be7153e270e8c746d53d685733f9fa45a13
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 3 09:44:36 2016 -0800
+
+    initial integration of JPL style, logos, etc.
+
+commit eed7ab1f172f5f570d02e8557f16bd09295c4704
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Mar 3 07:51:26 2016 -0800
+
+    save ARIA-specific mods to aria branch
+
+commit 264af60724477dd0933b94e4744aa54f9ef5dbc5
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Mar 1 19:41:05 2016 +0000
+
+    add sftp_action
+
+commit 9253e9729750404c968fa36f3d4b7038b45e4ffa
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Feb 25 17:26:05 2016 +0000
+
+    revert back to gevent worker; performs better under heavy load
+
+commit 2fce2cf82ffd65613fb729d15bd0b313dace7961
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 24 23:43:11 2016 +0000
+
+    mstarch: removeing e-mails
+
+commit e9f858f7a7527ed9edd39fac66653f6676c50d0d
+Author: M Starch <Michael.D.Starch@jpl.nasa.gov>
+Date:   Wed Feb 24 21:04:18 2016 +0000
+
+    mstarch: actions for UAVSAR
+
+commit 38b3ddbebe2b79dad68d713e0b676c46eb13c393
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Feb 17 19:22:27 2016 +0000
+
+    limit recursion to 1 level
+
+commit 55fb80793361c76d9315378ec5ad1f6ad69f73f6
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Feb 12 18:12:28 2016 +0000
+
+    use 4 workers
+
+commit 0bdd8b8242831aa7902f04e75fce992ac380d8fc
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Feb 11 23:29:45 2016 +0000
+
+    save initial geojson backend
+
+commit 7861f0468646ab53f9a350dc3a511c16ea20147c
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Feb 11 17:19:10 2016 +0000
+
+    add ability to query by region based on a result's GeoJSON bounds
+    
+    Refactor code to provide this capability.
+
+commit cda4dd540cd2e8533fd99067e936efcd194a2bb7
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Feb 4 17:17:00 2016 +0000
+
+    remove job priority facet
+
+commit f750f8590f74237a64e071332665ea56f322c675
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Feb 3 15:13:10 2016 +0000
+
+    add input orbit type facet
+
+commit d65602d77d283bccb3ccd2c953b1a0c70e177ecd
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Feb 3 15:00:27 2016 +0000
+
+    fix indentation
+
+commit 3cafefa713ee37b48f09dcc873bae6fe3b762c60
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 1 17:52:59 2016 +0000
+
+    make wget ask for password to prevent public view in ps command and history
+
+commit b3b0fdce5d2e76b432730e7b9bc0407fc49ec349
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Feb 1 17:49:02 2016 +0000
+
+    update template for ARIA
+
+commit 007a9f39f2cd4d4595c69e265a5aba0148cc51b8
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 28 18:44:21 2016 +0000
+
+    add readmore JS lib
+
+commit 22d066eff1f44828c81503623c00fb21716f0c06
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 28 16:05:50 2016 +0000
+
+    clear aout priority_val on hide; import readmore.js
+
+commit e3fffe0d951d29abe3733e4ec67df8b0d7e3bafe
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Jan 28 15:34:36 2016 +0000
+
+    rabbitmq priorities range from 0-9
+
+commit 7968273736f002438463d31cb52db31863057932
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jan 27 23:51:47 2016 +0000
+
+    add priority field
+
+commit 6dc566a6a9d02d829165c0a39bcc1b7eb254e648
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 26 21:08:16 2016 +0000
+
+    removed all traces of hard-coded port 8879
+
+commit c1ecd024662198bd1bc4725200efacd02918edca
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 26 20:44:37 2016 +0000
+
+    add capability to run behind proxy server
+
+commit eed1ba0b96175c9cb87681666516ad8428f43089
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 26 19:21:45 2016 +0000
+
+    set new mozart url proxied behind apache
+
+commit 5ed6c23b9dfb4bf90067bd66e8dd4c20a2277ee1
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jan 25 18:13:44 2016 +0000
+
+    add action for Sentinel interferogram workflow
+
+commit 95968462e35b9c08212ba94d631d9487f2660d15
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Jan 19 16:39:46 2016 +0000
+
+    use gthread worker
+
+commit cc81535fb89770d2a1169b990b200aa3cd7fe4f6
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jan 13 02:45:35 2016 +0000
+
+    specify ES index when updating user tags
+
+commit 8ae8334cfb1f54109b3080028082517fbe6a62e3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jan 6 18:17:46 2016 +0000
+
+    use eventlet worker
+
+commit 669cdcd5782c6b561ac1cdfd4754f5d18ac35e93
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Tue Dec 8 18:20:25 2015 +0000
+
+    add extract features action
+
+commit c43566e4c97d0cf6c05d9315c29fe5b24dbbbe1f
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Oct 9 06:51:02 2015 +0000
+
+    Flask-Login 0.3 contains a breaking change which changed is_active, is_anonymous, and is_authenticated from functions to properties
+
+commit ae8d326e550680d62d72fc98aaff922f53896bf9
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Oct 8 17:15:19 2015 +0000
+
+    remove versions from req; add template
+
+commit e622f53c7387bda8d43abf6607c0bd92be89a4fe
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 30 18:57:25 2015 +0000
+
+    updated
+
+commit 94ad5163316f00f88c0b0659976b5ff757345840
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 30 18:36:13 2015 +0000
+
+    updated
+
+commit d64b82ed0ea28b624fa3ca4936937733a7f092d3
+Author: gmanipon <gmanipon@jpl.nasa.gov>
+Date:   Fri Sep 25 04:41:17 2015 +0000
+
+    update ssl context; add settings for dev2
+
+commit cc322cc966ff52ec1d8c46ed97a1267dcb064671
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 9 19:36:07 2015 +0000
+
+    require peg parameters; will skip onFlightPeg.py in ariamh by detecting project
+
+commit bac9094f0e9b69101af3a50fc9cf435aca80605b
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 9 19:08:31 2015 +0000
+
+    set peg parameters as optional
+
+commit a5f87544144a5f66138b757e62b8887162f34a60
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Sep 9 19:06:09 2015 +0000
+
+    updated params for vanilla isce workflows
+
+commit a266ac9c7990fb950b0bccf412a2766a9b1ca7c9
+Author: Gerald Manipon <geraldjohn.m.manipon@jpl.nasa.gov>
+Date:   Thu Aug 6 13:06:38 2015 -0700
+
+    match up with hysds req
+
+commit d188fa665129127b82e9edb411dd140dc2e273a7
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Thu Aug 6 15:57:08 2015 +0000
+
+    use percolator for user rules
+
+commit 6f3c2dc1e6267d0acd38ac0116674cc73eb965c0
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 22 18:52:47 2015 +0000
+
+    add unwrapping products for on-demand workflow
+
+commit deaa41981b47e02131f4aecf1b27ca71c715c1f1
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 22 18:32:30 2015 +0000
+
+    added unwrapping files
+
+commit ebb22396164edf913b16e18a24363085491afd5d
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 22 02:44:21 2015 +0000
+
+    added productList and coherenceThreshold params
+
+commit 48be4670daa9430631b1d2923f89b47ce9860b3a
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Wed Jul 22 01:52:32 2015 +0000
+
+    updated hysds req
+
+commit 546069807fdb83365888b813f5c8525e86f30acc
+Merge: 426faf1 e436816
+Author: Gerald Manipon <geraldjohn.m.manipon@jpl.nasa.gov>
+Date:   Mon Jun 22 13:22:12 2015 -0700
+
+    Merge pull request #1 from gmanipon/master
+    
+    added queue_router_job action
+
+commit e4368162c79f8f147dd8e24fe7f5420a59b676b7
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 22 20:13:09 2015 +0000
+
+    added queue_router_job action
+
+commit 426faf1f436f9a23548338ac24824ef539703559
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 22 16:47:41 2015 +0000
+
+    added time-series action for ARIA-MH; implemented user_runs_history index
+    
+    Checked in progress on implementing user runs history.
+
+commit 82a03c8bc8bdf649f080d4bc82fd291015968400
+Author: Gerald Manipon <gmanipon@jpl.nasa.gov>
+Date:   Mon Jun 22 16:27:50 2015 +0000
+
+    initial import from SVN

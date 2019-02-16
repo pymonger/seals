@@ -1,0 +1,95 @@
+/*styles specific to the back map mixin*/
+#backMap{
+	float:left;
+	width:100%;
+	height:100%;
+	min-height:800px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+}
+#imageGrid{
+	float:left;
+	width:10%;
+	height:90%;
+	position: absolute;
+    right: 0;
+    bottom:0;
+    z-index: 999;
+
+}
+#imageGrid img{
+	float:left;
+	width:40%;
+	display:inline;
+	clear:none;
+	margin: 1px;
+	border: 3px solid #eee;
+	-webkit-transition: all 0.3s linear;
+	position:relative;
+	opacity:0.8;
+}
+#imageGrid:hover img{
+	width:40%;
+	opacity:1;
+}
+/*#imageGrid img:hover{
+	margin-left:-30px;
+	width:100%;
+}*/
+/*#imageGrid img:hover, #imageGrid img:hover ~ img{
+	width:80%;
+}*/
+#floatingMeta{
+	width:auto;
+	float:left;
+	height:150px;
+	margin:0;
+	position:fixed;
+	z-index:50020;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	padding:5px;
+	opacity:0;
+	display:none;
+	
+}
+#floatingMeta img{
+	max-width:20%;
+
+}
+#floatingMeta .map{
+	display:none;
+}
+#floatingMeta.showing{
+	opacity:0.8 !important;
+	display:block !Important;
+}
+#closeFloatingMeta{
+	float:right;
+	clear:both;
+	margin-right:20px;
+	left: 97%;
+	margin-top: 1%;
+	position:absolute;
+	cursor:pointer;
+}
+#next10Trigger{
+	position:absolute;
+	margin-top: -15px;
+	float:left;
+}
+#facetview_selectedfilters{
+  position:relative !important;
+}
+.flipped ~ #backSide #facetview_selectedfilters{
+  position:fixed;
+}
+img.leaflet-image-layer{
+	cursor:pointer;
+}

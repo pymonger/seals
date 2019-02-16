@@ -1,0 +1,22 @@
+{
+  "name": "facetview",
+  "version": "0.0.1",
+  "authors": [
+    "Alexander Smith <Alexander.Smith@jpl.nasa.gov>"
+  ],
+  "description": "generic modular facetview client",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.10",
+    "flight": "~1.1.1"
+  }
+}
