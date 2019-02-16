@@ -14,6 +14,7 @@ services:
     volumes:
       - "./etc:/home/ops/sciflo/etc"
       - "./log:/home/ops/sciflo/log"
+      - "../data:/data"
     links:
       - elasticsearch
       - minio

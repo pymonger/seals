@@ -9,6 +9,7 @@ COPY --chown=ops:ops src/tosca $HOME/sciflo/ops/tosca
 RUN set -ex \
  && sudo yum update -y \
  && source $HOME/sciflo/bin/activate \
+ && pip install -U awscli \
  && cd $HOME/sciflo/ops/tosca \
  && pip install -e . \
  && ln -sf $HOME/sciflo/etc/celeryconfig.py $HOME/sciflo/ops/hysds/celeryconfig.py \
