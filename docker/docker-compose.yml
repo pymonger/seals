@@ -1,0 +1,38 @@
+version: '2.2'
+services:
+  grq:
+    hostname: grq
+    container_name: grq
+    image: seals/grq
+    init: true
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8878:8878"
+      - "8879:8879"
+      - "9001:9001"
+    volumes:
+      - "./etc:/home/ops/sciflo/etc"
+      - "./log:/home/ops/sciflo/log"
+    links:
+      - elasticsearch
+  elasticsearch:
+    image: hysds/elasticsearch
+    hostname: grq-elasticsearch
+    container_name: grq-elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - "./elasticsearch/config:/usr/share/elasticsearch/config"
+      - "./elasticsearch/data:/usr/share/elasticsearch/data"
+    environment:
+      - ES_HEAP_SIZE=2048m
+      - MAX_LOCKED_MEMORY=unlimited
+    command: [ "elasticsearch",
+               "-Des.node.name='grq-elasticsearch'",
+               "-Des.cluster.name='products_cluster'",
+               "-Des.bootstrap.mlockall=true",
+               "-Des.network.host=0", 
+               "-Des.index.number_of_shards=16",
+               "-Des.script.engine.groovy.inline.aggs=on" ]
