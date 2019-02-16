@@ -14,6 +14,10 @@ RUN set -ex \
  && ln -sf $HOME/sciflo/etc/celeryconfig.py $HOME/sciflo/ops/hysds/celeryconfig.py \
  && ln -sf $HOME/sciflo/etc/grq2_settings.cfg $HOME/sciflo/ops/grq2/settings.cfg \
  && ln -sf $HOME/sciflo/etc/tosca_settings.cfg $HOME/sciflo/ops/tosca/settings.cfg \
+ && mkdir $HOME/.aws \
+ && chmod 700 $HOME/.aws \
+ && ln -sf $HOME/sciflo/etc/aws_config $HOME/.aws/config \
+ && ln -sf $HOME/sciflo/etc/aws_credentials $HOME/.aws/credentials \
  && sudo rm -rf /var/cache/yum \
  && rm -rf $HOME/.cache
 

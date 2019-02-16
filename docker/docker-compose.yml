@@ -16,6 +16,7 @@ services:
       - "./log:/home/ops/sciflo/log"
     links:
       - elasticsearch
+      - minio
   elasticsearch:
     image: hysds/elasticsearch
     hostname: grq-elasticsearch
@@ -36,3 +37,15 @@ services:
                "-Des.network.host=0", 
                "-Des.index.number_of_shards=16",
                "-Des.script.engine.groovy.inline.aggs=on" ]
+  minio:
+    hostname: minio-service
+    container_name: minio-service
+    image: minio/minio
+    volumes:
+      - "./storage:/export"
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: seals
+      MINIO_SECRET_KEY: seals4iu
+    command: server /export

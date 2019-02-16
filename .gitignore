@@ -3,3 +3,4 @@
 .DS_Store
 docker/elasticsearch
 docker/log
+docker/storage
