@@ -283,7 +283,6 @@ jQuery(document).ready(function($) {
         {'field':'city.admin2_name.raw', 'display': 'subregion'},
         {'field':'city.name.raw', 'display': 'city'},
         {'field':'dataset_level.raw', 'display': 'level'},
-        {'field':'metadata.KeelPage', 'display': 'KeelPage'},
         {'field':'metadata.KeelPage', 'display': 'KeelPage', 'type': 'number'},
         {'field':'metadata.KeelVol', 'display': 'KeelVol', 'type': 'number'},
         {'field':'metadata.Seals Per Site', 'display': 'Seals Per Site', 'type': 'number'}
@@ -1329,8 +1328,8 @@ jQuery(document).ready(function($) {
     var open_facets = [
       'dataset_type_raw',
       'dataset_raw',
-      'metadata_platform_raw',
-      'metadata_sensor_raw',
+      'metadata_KeelPage',
+      'metadata_KeelVol',
       'system_version_raw',
       'metadata_user_tags_raw',
       'metadata_tags_raw',
