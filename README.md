@@ -4,6 +4,12 @@
 - docker: https://www.docker.com/products/docker-desktop
 - docker-compose: https://docs.docker.com/compose/
 
+## Clone repo
+```
+git clone https://github.iu.edu/gmanipon/seals.git
+cd seals
+```
+
 ## Build docker image
 ```
 cd docker
@@ -22,11 +28,9 @@ cd docker
 docker-compose down
 ```
 
-
 ## Facet Search Interface
 After startup, you can access the Facet Search interface at
 https://localhost/search.
-
 
 ## Test ingest of dataset
 ```
@@ -38,14 +42,12 @@ docker-compose exec grq sciflo/bin/python \
 ```
 Verify dataset ingest by visiting https://localhost/search.
 
-
 ## Generate site datasets
 ```
 cd data
 ./create_site_datasets.py KeelCoordinates-CRS84.geojson
 ```
 All datasets will be generated under `data/test/datasets`.
-
 
 ## Ingest generated site datasets
 ```
