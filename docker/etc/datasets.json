@@ -25,6 +25,32 @@
           "s3://localhost:9000/dataset-bucket/browse/area_of_interest/{version}/{id}/"
         ]
       }
+    },
+    { 
+      "ipath": "ariamh::data/site",
+      "match_pattern": "/(?P<id>site-.+)$",
+      "alt_match_pattern": null,
+      "extractor": null,
+      "level": "l0",
+      "type": "site",
+      "publish": {
+        "s3-profile-name": "default",
+        "location": "s3://minio-service:9000/dataset-bucket/products/site/{version}/{id}",
+        "urls": [
+          "https://localhost/search/storage/dataset-bucket/products/site/{version}/{id}",
+          "http://localhost:9000/dataset-bucket/products/site/{version}/{id}/",
+          "s3://localhost:9000/dataset-bucket/products/site/{version}/{id}/"
+        ]
+      },
+      "browse": {
+        "s3-profile-name": "default",
+        "location": "s3://minio-service:9000/dataset-bucket/browse/site/{version}/{id}",
+        "urls": [
+          "https://localhost/search/storage/dataset-bucket/browse/site/{version}/{id}",
+          "http://localhost:9000/dataset-bucket/browse/site/{version}/{id}/",
+          "s3://localhost:9000/dataset-bucket/browse/site/{version}/{id}/"
+        ]
+      }
     }
   ]
 }

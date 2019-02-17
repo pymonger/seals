@@ -13,6 +13,7 @@ from grq2.lib.time_utils import getTemporalSpanInDays as get_ts
 POLYGON_RE = re.compile(r'^polygon$', re.I)
 MULTIPOLYGON_RE = re.compile(r'^multipolygon$', re.I)
 LINESTRING_RE = re.compile(r'^linestring$', re.I)
+POINT_RE = re.compile(r'^point$', re.I)
 
 
 def update(update_json):
@@ -56,6 +57,10 @@ def update(update_json):
             mp = True
         elif LINESTRING_RE.search(loc_type):
             coords = update_json['location']['coordinates']
+        elif POINT_RE.search(loc_type):
+            coords = update_json['location']['coordinates']
+            if 'center' not in update_json:
+                update_json['center'] = update_json['location']
 
         # add cities
         #update_json['city'] = get_cities(coords, pop_th=0, multipolygon=mp)
