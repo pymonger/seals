@@ -16,17 +16,45 @@ cd docker
 docker-compose up -d
 ```
 
+## Shutdown
+```
+cd docker
+docker-compose down
+```
+
+
+## Facet Search Interface
+After startup, you can access the Facet Search interface at
+https://localhost/search.
+
+
 ## Test ingest of dataset
 ```
 cd docker
 docker-compose exec grq sciflo/bin/python \
   sciflo/ops/hysds/scripts/ingest_dataset.py \
-  /data/test/AOI_sacramento_valley \
+  /data/test/site-tell_abu_hawam-keelvol_1_keelpage_4 \
   sciflo/etc/datasets.json
 ```
+Verify dataset ingest by visiting https://localhost/search.
 
-## Shutdown
+
+## Generate site datasets
+```
+cd data
+./create_site_datasets.py KeelCoordinates-CRS84.geojson
+```
+All datasets will be generated under `data/test/datasets`.
+
+
+## Ingest generated site datasets
 ```
 cd docker
-docker-compose down
+for i in ../data/test/datasets/*; do
+  ds=$(basename $i)
+  docker-compose exec grq sciflo/bin/python \
+    sciflo/ops/hysds/scripts/ingest_dataset.py \
+    /data/test/datasets/${ds} \
+    sciflo/etc/datasets.json
+done
 ```
