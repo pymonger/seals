@@ -1,6 +1,6 @@
-# seals
+# Facet Search of Syro-Palestinian Bronze and Iron Age Seals
 
-## Requirments
+## Requirements
 - docker: https://www.docker.com/products/docker-desktop
 - docker-compose: https://docs.docker.com/compose/
 
