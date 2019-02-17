@@ -11,6 +11,7 @@
         "s3-profile-name": "default",
         "location": "s3://minio-service:9000/dataset-bucket/products/area_of_interest/{version}/{id}",
         "urls": [
+          "https://localhost/search/storage/dataset-bucket/products/area_of_interest/{version}/{id}",
           "http://localhost:9000/dataset-bucket/products/area_of_interest/{version}/{id}/",
           "s3://localhost:9000/dataset-bucket/products/area_of_interest/{version}/{id}/"
         ]
@@ -19,6 +20,7 @@
         "s3-profile-name": "default",
         "location": "s3://minio-service:9000/dataset-bucket/browse/area_of_interest/{version}/{id}",
         "urls": [
+          "https://localhost/search/storage/dataset-bucket/browse/area_of_interest/{version}/{id}",
           "http://localhost:9000/dataset-bucket/browse/area_of_interest/{version}/{id}/",
           "s3://localhost:9000/dataset-bucket/browse/area_of_interest/{version}/{id}/"
         ]

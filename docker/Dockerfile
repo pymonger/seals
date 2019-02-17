@@ -11,6 +11,7 @@ ENV OPS_HOME /home/ops
 COPY --chown=ops:ops src/hysds ${OPS_HOME}/sciflo/ops/hysds
 COPY --chown=ops:ops src/tosca ${OPS_HOME}/sciflo/ops/tosca
 COPY --chown=ops:ops src/grq2 ${OPS_HOME}/sciflo/ops/grq2
+COPY docker/etc/ssl.conf /etc/httpd/conf.d/ssl.conf
 RUN set -ex \
  && sudo yum update -y \
  && source ${OPS_HOME}/sciflo/bin/activate \
