@@ -22,15 +22,15 @@ cd docker
 docker-compose up -d
 ```
 
+## Facet Search Interface
+After startup, you can access the Facet Search interface at
+https://localhost/search.
+
 ## Shutdown
 ```
 cd docker
 docker-compose down
 ```
-
-## Facet Search Interface
-After startup, you can access the Facet Search interface at
-https://localhost/search.
 
 ## Test ingest of dataset
 ```
