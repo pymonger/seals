@@ -26,6 +26,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
+      - "./elasticsearch/log:/usr/share/elasticsearch/log"
       - "./elasticsearch/config:/usr/share/elasticsearch/config"
       - "./elasticsearch/data:/usr/share/elasticsearch/data"
     environment:
@@ -33,6 +34,7 @@ services:
       - MAX_LOCKED_MEMORY=unlimited
     command: [ "elasticsearch",
                "-Des.node.name='grq-elasticsearch'",
+               "-Des.logs.base_path='/usr/share/elasticsearch/log'",
                "-Des.cluster.name='products_cluster'",
                "-Des.bootstrap.mlockall=true",
                "-Des.network.host=0", 
