@@ -1,0 +1,139 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="bower_components/leaflet/dist/leaflet.css" />
+	<style>
+	#map{
+		width:100%;
+		height:100%;
+		float:left;
+		margin:0%;
+	}
+	html,body{
+		margin:0;
+		padding:0;
+	}
+	.leaflet-control{
+		overflow-y: auto;
+		max-height: 500px;
+	}
+	/*IMPORTANT::::: wmts set col0 row0 to z-index 1 for continuous world*/
+	.leaflet-tile[data-tilecol="0"]{
+	    z-index:1;
+	}
+	#hoverPos{
+		float:left;
+		color:#fff;
+		position:absolute;
+		bottom:0;left:0;
+		background:rgba(0,0,0,0.7);
+	}
+	</style>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery.browser/dist/jquery.browser.min.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="leaflet/leaflet-src.js"></script>
+	<script src="leaflet/leaflet.WMTS.js"></script>
+
+	<script>
+	var l,map, capabilities;
+	var mycrs;
+	var marker;
+
+	function testReset(xval,yval){
+		map.remove(marker);
+        map.removeLayer(l);
+		mycrs = L.extend({}, L.CRS, {
+            projection: L.Projection.LonLat,
+		    transformation: new L.Transformation(Math.PI*2/(900),xval,-Math.PI/451,yval)/*,
+		    scale: function (zoom) {
+		     return 512 * Math.pow(2, zoom);
+		   	}*/
+        });
+        map.options.crs = mycrs;
+		map._initialTopLeftPoint = map._getNewTopLeftPoint(map.getCenter());
+        
+        //a one off if you go to get caps and get the data yourself...
+        var url = 'http://map1b.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi';
+        var oceanName = 'MODIS_Aqua_CorrectedReflectance_TrueColor';
+        var matrixId = 'EPSG4326_250m';
+        var format = 'image/jpeg';
+        l = new L.tileLayer.wmts(
+            url,
+          {
+            tileMatrixSet:matrixId,
+            format:format,
+            layer:oceanName,
+            tileSize:512,
+            date:dateString,
+            useTime:useTime,
+            isBaseMap:true
+          }
+        );
+        l.addTo(map);
+        marker = new L.Marker([34,-120]).addTo(map);
+	}
+	function makeZero(){
+		new L.Marker([0,0]).addTo(map);
+		map.setView([0,0],7)
+	}
+	$(document).ready(function(){
+		//we are ready, lets make maps!
+		
+		var myEPSG3426 = L.extend({}, L.CRS, {
+            projection: L.Projection.LonLat,
+		    transformation: new L.Transformation(Math.PI*2/(904.5),1.2502,-Math.PI/449.5,0.6265)
+        });
+        map = L.map('map',{crs:myEPSG3426,tms: false,reuseTiles:true});
+        
+        map.setView([0,0],1);
+        //marker = new L.Marker([34.031,-120.040]).addTo(map);
+        var url = 'http://map1b.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi';
+        var blueMarble = 'blue_marble';
+        var matrixId = 'EPSG4326_500m';
+        var format = 'image/jpeg';
+        //known bug w moment: check for leading zeros on month/days in != chrome
+        dateString = moment(new Date()).subtract('days',2).format('YYYY-MM-DD');
+        useTime = true;
+
+        
+        //this is the one-off way to add a WMTS layer. 
+        //layer options.
+        var layerOptions = {
+            tileMatrixSet:matrixId,
+            format:format,
+            layer:blueMarble,
+            tileSize:512,
+            date:dateString,
+            useTime:useTime,
+            isBaseMap:true,
+            maxNativeZoom: 7
+        };
+        //layer
+        l = new L.tileLayer.wmts(
+            url,
+          	layerOptions
+        );
+        l.addTo(map);
+        //ok let's use some methods to do a get capabilities request to the server and add the layers as a layer chooser
+        capabilities = new L.WMTSCapabilities();
+        capabilities.harvestWMTS('http://map1b.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi?REQUEST=GetCapabilities','http://map1b.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi',dateString,function(res){
+        	console.log('result',res)
+        	//NOTE: Use the meta from res to either construct layers or add layer controls.
+        	//returns {matrices:[],layerMeta:[],layerControl;new L.Controls(layerlist),layerList:layerlist}
+        	//and a layercontrol if you wish.
+        	res.layerControl.addTo(map);
+        }); //caps request URL, and base URL for each layer
+
+        map.on('mousemove',function(e){
+        	
+        	$('#hoverPos').html('lat: '+e.latlng.lat+' lng: '+e.latlng.lng);
+        })
+	})
+	</script>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="hoverPos"></div>
+</body>
+</html>

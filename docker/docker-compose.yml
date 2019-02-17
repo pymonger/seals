@@ -14,8 +14,11 @@ services:
     volumes:
       - "./etc:/home/ops/sciflo/etc"
       - "./log:/home/ops/sciflo/log"
+      - "../data:/data"
+      - "./storage:/storage"
     links:
       - elasticsearch
+      - minio
   elasticsearch:
     image: hysds/elasticsearch
     hostname: grq-elasticsearch
@@ -24,6 +27,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
+      - "./elasticsearch/log:/usr/share/elasticsearch/log"
       - "./elasticsearch/config:/usr/share/elasticsearch/config"
       - "./elasticsearch/data:/usr/share/elasticsearch/data"
     environment:
@@ -31,8 +35,21 @@ services:
       - MAX_LOCKED_MEMORY=unlimited
     command: [ "elasticsearch",
                "-Des.node.name='grq-elasticsearch'",
+               "-Des.logs.base_path='/usr/share/elasticsearch/log'",
                "-Des.cluster.name='products_cluster'",
                "-Des.bootstrap.mlockall=true",
                "-Des.network.host=0", 
                "-Des.index.number_of_shards=16",
                "-Des.script.engine.groovy.inline.aggs=on" ]
+  minio:
+    hostname: minio-service
+    container_name: minio-service
+    image: minio/minio
+    volumes:
+      - "./storage:/export"
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: seals
+      MINIO_SECRET_KEY: seals4iu
+    command: server /export

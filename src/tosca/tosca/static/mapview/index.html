@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Facet Search</title>
+
+  <style>
+    .map {
+      width: 140px;
+      height: 140px;
+    }
+
+    .btn {
+      vertical-align: top;
+    }
+
+    body{
+      opacity:0;
+    }
+
+    /* loading backdrop */
+    .loading-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1040;
+      background-color: #000000;
+    }
+
+    .loading-backdrop.fade {
+      opacity: 0;
+    }
+
+    .loading-backdrop, .loading-backdrop.fade.in {
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
+
+  </style>
+  <script data-main="js/main.js" src="bower_components/requirejs/require.js"></script>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Facet Search</a>
+      <ul class="nav">
+        <li><a href="http://aria.jpl.nasa.gov">Home</a></li>
+        <li><a href="https://aria-search.jpl.nasa.gov">Facet Search</a></li>
+        <li><a href="https://aria-csk-dav.jpl.nasa.gov">Repository</a></li>
+        <li><a href="https://aria2-dav.jpl.nasa.gov/kml/">KML</a></li>
+        <li><a href="https://aria-jobs.jpl.nasa.gov/mozart/">Jobs</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="flipCard"> 
+  <div class="content" id="frontSide">
+    <div class="page-header">
+      <h1>
+        Facet Search <small>faceted search interface for GeoRegionQuery</small>
+      </h1>
+    </div>
+
+    <!--<h4>GRQ facets</h4>-->
+    <div id="backButton" class="flipMapButton"><img class="optIcon" src="img/mapIcon.png" alt="mapIcon" />Map</div>
+    <div class="facet-view-simple"></div>
+
+    <!--
+    <h2>More Complex Demo</h2>
+    <p>Here we provide you with the option to supply a SOLR or ES endpoint. In
+    normal usage you will configure the search endpoint when you initialize
+    FacetView in your code.</p>
+    <form class="demo-form">
+      <fieldset>
+        <label for="search_url">SOLR/ES Endpoint</label>
+        <div class="input">
+          <input type="text" name="search_url" class="span9" value="http://openspending.org/api/search?" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="input">
+          <div class="inline-inputs">
+            <input type="radio" checked="" name="search_index" value="solr" /><span>SOLR</span>
+            <input type="radio" name="search_index" value="elasticsearch" /><span>ElasticSearch</span>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="input">
+          <button type="submit" class="btn primary">Go &raquo;</button>
+        </div>
+      </fieldset>
+    </form>
+    <div class="facet-view-here"></div>
+    -->
+
+  </div>
+  <div class="content" id="backSide">
+    <div id="backBackButton" class="flipMapButton">[BACK]</div>
+    <div id="backMap"></div>
+  </div>
+</div>
+</body>
+</html>

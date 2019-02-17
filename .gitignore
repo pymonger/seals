@@ -1,2 +1,7 @@
+*.pyc
+*.egg-info
+.DS_Store
 docker/elasticsearch
 docker/log
+docker/storage/.minio.sys
+data/test/datasets

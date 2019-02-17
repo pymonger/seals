@@ -1,0 +1,30 @@
+{
+  "name": "Leaflet WMTS(NASA:GIBS) Plugin",
+  "version": "0.0.0",
+  "authors": [
+    "Alexander.Smith@jpl.nasa.gov"
+  ],
+  "description": "a plugin for WMTS specific to EPSG:4326 for NASA's GIBS Service",
+  "main": "example.html",
+  "keywords": [
+    "leaflet",
+    "wmts",
+    "gibs",
+    "epsg4326"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "moment": "~2.6.0",
+    "leaflet": "~0.7.2",
+    "jquery.browser": "~0.0.6"
+  }
+}

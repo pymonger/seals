@@ -1,0 +1,118 @@
+import os, json, requests, types, re, tarfile, hashlib, shutil, subprocess
+from cStringIO import StringIO
+from flask import jsonify, Blueprint, request, Response, render_template, make_response, stream_with_context
+from flask.ext.login import login_required
+from pprint import pformat
+from urlparse import urlparse
+
+from tosca import app
+
+
+mod = Blueprint('services/download', __name__)
+
+
+def get_string_io_len(s):
+    pos = s.tell()
+    s.seek(0, os.SEEK_END)
+    length = s.tell()
+    s.seek(pos)
+    return length    
+ 
+
+class CrazyBuffer(object):
+    def __init__(self):
+        self._buffer = StringIO()
+    def read(self, nbytes=None):
+        pass
+    def write(self, data):
+        self._buffer.write(data)
+    def close(self):
+        pass
+    def tell(self):
+        return 0
+    def seek(self, offset, whence=None):
+        return 0
+    def get_value(self):
+        return self._buffer.getvalue()
+    def reset(self):
+        self._buffer.close()
+        self._buffer = StringIO()
+
+
+@mod.route('/download/<dataset>', methods=['GET'])
+@login_required
+def download(dataset=None):
+    """Return downloaded tarball."""
+
+    # get callback, source, and dataset
+    source = request.args.get('source')
+    if dataset is None:
+        return jsonify({
+            'success': False,
+            'message': "Cannot recognize dataset: %s" % dataset,
+        }), 500
+
+    # query
+    es_url = app.config['ES_URL']
+    index = dataset
+    app.logger.debug("ES query for download(): %s" % source)
+    r = requests.post('%s/%s/_search?search_type=scan&scroll=10m&size=100' % (es_url, index), data=source)
+    if r.status_code != 200:
+        app.logger.debug("Failed to query ES. Got status code %d:\n%s" % 
+                         (r.status_code, json.dumps(result, indent=2)))
+    r.raise_for_status()
+    #app.logger.debug("result: %s" % pformat(r.json()))
+
+    scan_result = r.json()
+    count = scan_result['hits']['total']
+    scroll_id = scan_result['_scroll_id']
+
+    # get list of urls
+    urls = []
+    while True:
+        r = requests.post('%s/_search/scroll?scroll=10m' % es_url, data=scroll_id)
+        res = r.json()
+        scroll_id = res['_scroll_id']
+        if len(res['hits']['hits']) == 0: break
+        for hit in res['hits']['hits']:
+            for url in hit['fields']['urls']:
+                if 'aria-dav.jpl.nasa.gov' in url:
+                    urls.append(url)
+                    break
+
+    def stream_tar_response(urls):
+        urls.sort()
+        m = hashlib.md5()
+        m.update(json.dumps(urls))
+        digest = m.hexdigest()
+        sync_dir = app.config['SCRATCH_DIR']
+        crazy_buffer = CrazyBuffer()
+        tar_file_path = os.path.join(app.config['SCRATCH_DIR'], '%s.tbz2' % digest)
+        tar = tarfile.open(tar_file_path, "w:bz2", crazy_buffer)
+        for i, f in enumerate(urls):
+            p = urlparse(f)
+            cut_dirs = p.path.count('/') - 1
+            prod_name = os.path.basename(p.path)
+            src_dir = os.path.join(sync_dir, prod_name)
+            if not os.path.exists(src_dir):
+                cmd = 'wget --no-check-certificate -P %s ' % sync_dir
+                cmd += '--mirror -nv -np -nH --reject "index.html*" '
+                cmd += '--user=pucops --password=puc_0ps --cut-dirs=%s %s' % (cut_dirs, f)
+                sts = subprocess.call(cmd, shell=True)
+            prod_dir = os.path.join(sync_dir, os.path.basename(p.path))
+            for root, dirs, files in os.walk(prod_dir):
+                dirs.sort()
+                files.sort()
+                for file in files:
+                    info = tarfile.TarInfo(name=os.path.relpath(os.path.join(root, file), sync_dir))
+                    with open(os.path.join(root, file)) as f:
+                        info.size = get_string_io_len(f)
+                        tar.addfile(info, f)
+                    yield crazy_buffer.get_value()
+                    crazy_buffer.reset()
+            #shutil.rmtree(prod_dir)
+        tar.close()
+        yield crazy_buffer.get_value()
+
+    headers = {'Content-Disposition': 'attachment; filename=%s.tbz2' % dataset}
+    return Response(stream_with_context(stream_tar_response(urls)), headers=headers, mimetype="application/x-gtar")

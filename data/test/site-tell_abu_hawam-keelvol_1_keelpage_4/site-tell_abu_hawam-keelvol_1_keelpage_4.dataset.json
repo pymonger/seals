@@ -1,0 +1,8 @@
+{ 
+  "version": "0.1", 
+  "label": "Tell Abu Hawam",
+  "location": {
+    "type": "point",
+    "coordinates": [ 35.019675233634139, 32.801368398594285 ]
+  }
+}

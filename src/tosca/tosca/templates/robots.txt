@@ -1,0 +1,8 @@
+User-agent: PowerMapper
+Allow: /
+
+User-agent: *
+Disallow: /login
+
+# Allow search crawlers to discover the sitemap
+Sitemap: /sitemap.xml

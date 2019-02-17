@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Facet Search</title>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/jquery/1.7.1/jquery-1.7.1.min.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/bootstrap/css/bootstrap.min.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/bootstrap/js/bootstrap.min.js') }}"></script>  
+
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/linkify/1.0/jquery.linkify-1.0-min.js') }}"></script>  
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/jquery-ui-1.8.18.custom/jquery-ui-1.8.18.custom.min.js') }}"></script>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/jquery.facetview.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/css/facetview.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/css/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/jqzoom_ev-2.3/css/jquery.jqzoom.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/jqzoom_ev-2.3/js/jquery.jqzoom-core.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/leaflet-1.0.3/leaflet.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/Leaflet.draw/dist/leaflet.draw.css') }}">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/leaflet-1.0.3/leaflet.ie.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='facetview/vendor/Leaflet.draw/dist/leaflet.draw.ie.css') }}" />
+  <![endif]-->
+
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/leaflet-1.0.3/leaflet.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='facetview/vendor/Leaflet.draw/dist/leaflet.draw.js') }}"></script>
+
+  <!-- 
+  <link href="{{ url_for('static', filename='facetview/vendor/jQRangeSlider-5.5.0/css/iThing.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='facetview/vendor/jQRangeSlider-5.5.0/jQAllRangeSliders-withRuler-min.js') }}"></script>
+  -->
+
+
+  <style>
+    .location_search_map {
+      width: 600px;
+      height: 400px;
+    }
+
+    .map {
+      width: 140px;
+      height: 140px;
+    }
+
+    .btn {
+      vertical-align: top;
+    }
+  </style>
+
+  <script type="text/javascript">
+    var dataset = "{{ dataset }}";
+    var query = {{ source|safe }};
+    $(function() {
+      $.ajax({
+        type: "GET",
+        url: '{{ url_for('services/download.download', dataset=dataset) }}?source={{ source|safe }}',
+        success: function(data, sts, xhr) {
+          $('#download_image').attr("src", "{{ url_for('static', filename='img/tarball_done.png') }}");
+          $('#download_title').html("Finished tarball generation");
+          $('#download_message').html('Click on <a href="' + data.url + '">this link</a> to download.');
+          var snd = new Audio("{{ url_for('static', filename='snd/tarball_done.mp3') }}"); // buffers automatically when created
+          snd.play();
+          //window.location.replace(data.url);
+          //opener.location.href = data.url;
+          //close();
+        },
+        error: function(xhr, sts, err) {
+          alert("Status: " + sts);
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Facet Search</a>
+      <ul class="nav">
+        <li><a href="http://aria.jpl.nasa.gov">Home</a></li>
+        <li><a href="{{ url_for('views/main.index') }}">Facet Search</a></li>
+        <li><a href="http://aria-dav.jpl.nasa.gov">Repository</a></li>
+        <li><a href="http://aria1.jpl.nasa.gov/public/csk/footprint/csk_scenes_downloaded_by_aria.kml">KML</a></li>
+        <li><a href="{{ config['FIGARO_URL'] }}">Jobs</a></li>
+      </ul>
+      {% if g.user.is_authenticated %}
+      <ul class="nav pull-right">
+        <li><p class="navbar-text">Logged in as: <strong>{{ g.user.id }}</strong></p></li>
+        <li><a href="{{ url_for('views/main.logout') }}">Logout</a></li>
+      </ul>
+      {% else %}
+      <ul class="nav pull-right">
+        <li><a href="{{ url_for('views/main.login') }}">Login</a></li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+    <!--Alerts-->
+    {% with messages = get_flashed_messages(category_filter=["message"]) %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="container"> 
+        <div class="alert alert-success">
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+          {{ message }}
+        </div>
+      </div>
+      {% endfor %}
+      <script>
+        window.setTimeout( function() {
+          $( ".alert" ).fadeTo(500, 0).slideUp(500, function() {
+            $(this).remove();
+          });
+        }, 5000);
+      </script>
+    {% endif %}
+    {% endwith %}
+
+<div class="container"> 
+  <div class="content">
+    <div class="page-header">
+      <h1>
+        Facet Search <small>faceted search interface for GeoRegionQuery</small>
+      </h1>
+    </div>
+
+    <div class="container">
+      <center>
+        <h2 id="download_title">Running the tarball generator. This may take a while...</h2>
+        <img id="download_image" src="{{ url_for('static', filename='img/running.gif') }}" class="img-rounded"/>
+        <p id="download_message">Do not close this window. A download link will be provided when the tarball is ready for download. Listen for Fido's bark!</p>
+      </center>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
