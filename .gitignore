@@ -4,4 +4,4 @@
 docker/elasticsearch
 docker/log
 docker/storage/.minio.sys
-data/test/datasets
+data/test/datasets*
