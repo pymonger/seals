@@ -1,4 +1,19 @@
-# Facet Search of Syro-Palestinian Bronze and Iron Age Seals
+# Syro-Palestinian Bronze and Iron Age Seals Visualizations
+This repository provides 2 web interfaces that allow end users the ability to
+visually browse and search through the catalog of seal excavation sites:
+
+- Facet Search
+- Kibana
+
+## Data
+Previous work had generated a [CSV file](data/KeelCoordinates.csv) that could 
+visualize the seal sites on QGIS (https://www.qgis.org/en/site/), a GIS desktop tool. 
+However to use this dataset in modern GIS tools, we transformed the dataset in the
+CSV and converted the geolocation coordinates from Palestinian grid to WGS84, a more
+general georeference coordinate system recognized by databases with geospatial 
+extensions. QGIS does this transformation nicely and also provides an export feature
+to GeoJSON. That GeoJSON file located in the repository [here](data/KeelCoordinates-CRS84.geojson)
+and serves as input dataset for both the Facet Search and Kibana interfaces.
 
 ## Requirements
 - docker: https://www.docker.com/products/docker-desktop
