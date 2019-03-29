@@ -13,7 +13,87 @@ TSV and converted the geolocation coordinates from Palestinian grid to WGS84, a 
 general georeference coordinate system recognized by databases with geospatial 
 extensions. QGIS does this transformation nicely and also provides an export feature
 to GeoJSON. That GeoJSON file located in the repository [here](data/KeelCoordinates-CRS84.geojson)
-and serves as input dataset for both the Facet Search and Kibana interfaces.
+and serves as input dataset for both the Facet Search and Kibana interfaces. Below is
+a snippet of one of the seal site records in the GeoJSON file:
+
+```
+        {
+            "type": "Feature",
+            "properties": {
+                "Site": "Tell Abu Farag",
+                "X": 198500,
+                "Y": 203500,
+                "KeelVol": "1",
+                "KeelPage": 2,
+                "Seals per Site": 1
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.51323845069626,
+                    32.42511136160683
+                ]
+            }
+        },
+```
+Note that this record is a GeoJSON Feature and conforms to the [GeoJSON spec](http://geojson.org/).
+Also note the `properties` object in the feature which preserves the record's
+column fields from the original TSV file. **Any future work to enhance this 
+dataset should populate fields in `properties`.** This way any visualization
+tool developed from a database (in this case Elasticsearch) will have access
+to a rich set of properties for each site.
+
+For example, if in future development work browse images for all the seals at a
+given site were catalogued and made public on the web, we could update the 
+GeoJSON file with an additional property:
+```
+        {  
+            "type": "Feature",
+            "properties": {
+                "Site": "Tell Abu Farag",
+                "X": 198500,
+                "Y": 203500,
+                "KeelVol": "1",
+                "KeelPage": 2,
+                "Seals per Site": 1,
+                "seals_browse_image": [
+                    "http://some.url.to/a/seal/browse/image.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.51323845069626,
+                    32.42511136160683
+                ]
+            }
+        },
+```
+or in the case that more than one seals were found at the site:
+```
+        {  
+            "type": "Feature",
+            "properties": {
+                "Site": "Tell Abu Farag",
+                "X": 198500,
+                "Y": 203500,
+                "KeelVol": "1",
+                "KeelPage": 2,
+                "Seals per Site": 2,
+                "seals_browse_image": [
+                    "http://some.url.to/a/seal/browse/image1.png",
+                    "http://some.url.to/a/seal/browse/image2.png"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.51323845069626,
+                    32.42511136160683
+                ]
+            }
+        },
+```
 
 ## Requirements
 - docker: https://www.docker.com/products/docker-desktop

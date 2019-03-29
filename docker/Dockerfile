@@ -1,4 +1,4 @@
-FROM hysds/grq:python2
+FROM hysds/grq:latest
 
 MAINTAINER Gerald Manipon (pymonger) "pymonger@gmail.com"
 LABEL description="Seals GRQ image"
