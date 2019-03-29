@@ -166,7 +166,8 @@ done
 This will take some time as it ingests the rest of the 
 seal sites into your Elasticsearch database. Once it's 
 done ingesting, view all of the seal sites and play around
-with the facets on the left panel: https://localhost/search.
+with the facets on the left panel as well as the leaflet
+map interface: https://localhost/search.
 
 ![All Sites](/img/facet_search-all_sites.png?raw=true "All Sites")
 
