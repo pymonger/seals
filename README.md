@@ -6,10 +6,10 @@ visually browse and search through the catalog of seal excavation sites:
 - Kibana
 
 ## Data
-Previous work had generated a [CSV file](data/KeelCoordinates.csv) that could 
+Previous work had generated a [TSV file](data/KeelCoordinates.tsv) that could 
 visualize the seal sites on QGIS (https://www.qgis.org/en/site/), a GIS desktop tool. 
 However to use this dataset in modern GIS tools, we transformed the dataset in the
-CSV and converted the geolocation coordinates from Palestinian grid to WGS84, a more
+TSV and converted the geolocation coordinates from Palestinian grid to WGS84, a more
 general georeference coordinate system recognized by databases with geospatial 
 extensions. QGIS does this transformation nicely and also provides an export feature
 to GeoJSON. That GeoJSON file located in the repository [here](data/KeelCoordinates-CRS84.geojson)
