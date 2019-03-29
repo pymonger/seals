@@ -36,6 +36,7 @@ def main(geojson_file):
             json.dump(props, f, indent=2, sort_keys=True)
 
         # add some fake browse images
+        # TODO: use actual seal images instead of faking it here for demo purposes
         for png in glob('test/site-tell_abu_hawam-keelvol_1_keelpage_4/*.png'):
             shutil.copy(png, dataset_dir)
 

@@ -177,26 +177,31 @@ docker-compose down
 ```
 
 ## Kibana
+This visualization interface is part of the [ELK Stack](https://www.elastic.co)
+and also utilizes Elasticsearch as its backend. For more information 
+and documentation on Kibana and the rest of the ELK stack, visit
+https://www.elastic.co/products/kibana.
+
+In our adaption of Kibana for this project, we simply reformat the 
+data contained in the GeoJSON into a format that is optimized for
+Kibana visualization and ingest them into Elasticsearch. Below
+is an animated screenshot showing usage of Kibana:
+
+![Kibana](/img/kibana.gif?raw=true "Kibana")
 
 ### Startup 
 ```
-cd docker
 docker-compose -f docker-compose.kibana.yml up -d
 ```
 
 ### Kibana Interface
-After startup, you can access Kibana at
-http://localhost:5601.
+After startup, you can access Kibana at http://localhost:5601.
 
-### Shutdown
-```
-cd docker
-docker-compose -f docker-compose.kibana.yml down
-```
+![Empty Kibana](/img/kibana-empty.png?raw=true "Empty Kibana")
 
 ### Generate site datasets
 ```
-cd data
+cd ../data
 ./create_site_datasets-kibana.py KeelCoordinates-CRS84.geojson
 ```
 All datasets will be generated under `test/datasets-kibana`.
@@ -222,4 +227,28 @@ curl -XPUT "localhost:9200/seals" -H 'Content-Type: application/json' -d'{
 for i in test/datasets-kibana/*/*.dataset.json; do
   curl -XPOST "localhost:9200/seals/site/" -H 'Content-Type: application/json' -d @${i}
 done
+```
+This will take some time as it ingests the rest of the 
+seal sites into your Elasticsearch database. Once it's 
+done ingesting, you can visualize the Elasticsearch 
+database by installing the `Elasticsearch Head` extension
+for your browser. Once installed, specify your Elasticsearch
+url as `http://localhost:9200`:
+
+![ES Head](/img/es_head.png?raw=true "ES Head")
+
+Finally visit http://localhost:5601. Since you have data 
+already in Elasticsearch, you'll need to do some preliminary
+steps to define your index patterns:
+https://www.elastic.co/guide/en/kibana/current/tutorial-define-index.html
+Once that is complete, you can then start exploring the dataset and
+create visualization and dashboards. The following screenshot shows
+a `Coordinate Map` visualization of the seal sites:
+
+![Kibana - Coordinate Map](/img/kibana-coordinate_map.png?raw=true "Kibana - Coordinate Map")
+
+### Shutdown
+```
+cd ../docker
+docker-compose -f docker-compose.kibana.yml down
 ```
