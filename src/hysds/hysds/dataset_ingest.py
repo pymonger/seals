@@ -393,17 +393,17 @@ def ingest(objectid, dsets_file, grq_update_url, dataset_processed_queue,
                     msg = "This job is a retry of a previous job that resulted " + \
                           "in an orphaned dataset. Forcing publish."
                     logger.warn(msg)
-                    log_custom_event('orphaned_dataset-retry_previous_failed', 'clobber',
-                                     { 'orphan_info': {
-                                           'payload_id': payload_id,
-                                           'payload_hash': payload_hash,
-                                           'task_id': task_id,
-                                           'orig_payload_id': orig_payload_id,
-                                           'orig_payload_hash': orig_payload_hash,
-                                           'orig_task_id': orig_task_id,
-                                           'dataset_id': objectid,
-                                           'dataset_url': pub_path_url,
-                                           'msg': msg }})
+                    #log_custom_event('orphaned_dataset-retry_previous_failed', 'clobber',
+                    #                 { 'orphan_info': {
+                    #                       'payload_id': payload_id,
+                    #                       'payload_hash': payload_hash,
+                    #                       'task_id': task_id,
+                    #                       'orig_payload_id': orig_payload_id,
+                    #                       'orig_payload_hash': orig_payload_hash,
+                    #                       'orig_task_id': orig_task_id,
+                    #                       'dataset_id': objectid,
+                    #                       'dataset_url': pub_path_url,
+                    #                       'msg': msg }})
                 else:
                     job_status = get_job_status(orig_payload_id)
                     logger.warn("orig job status: {}".format(job_status))
@@ -413,18 +413,18 @@ def ingest(objectid, dsets_file, grq_update_url, dataset_processed_queue,
                         msg = "Detected previous job failure that resulted in an " + \
                               "orphaned dataset. Forcing publish."
                         logger.warn(msg)
-                        log_custom_event('orphaned_dataset-job_failed', 'clobber',
-                                         { 'orphan_info': {
-                                               'payload_id': payload_id,
-                                               'payload_hash': payload_hash,
-                                               'task_id': task_id,
-                                               'orig_payload_id': orig_payload_id,
-                                               'orig_payload_hash': orig_payload_hash,
-                                               'orig_task_id': orig_task_id,
-                                               'orig_status': job_status,
-                                               'dataset_id': objectid,
-                                               'dataset_url': pub_path_url,
-                                               'msg': msg }})
+                        #log_custom_event('orphaned_dataset-job_failed', 'clobber',
+                        #                 { 'orphan_info': {
+                        #                       'payload_id': payload_id,
+                        #                       'payload_hash': payload_hash,
+                        #                       'task_id': task_id,
+                        #                       'orig_payload_id': orig_payload_id,
+                        #                       'orig_payload_hash': orig_payload_hash,
+                        #                       'orig_task_id': orig_task_id,
+                        #                       'orig_status': job_status,
+                        #                       'dataset_id': objectid,
+                        #                       'dataset_url': pub_path_url,
+                        #                       'msg': msg }})
                     else: raise
                 publish_dataset(local_prod_path, pub_path_url, params=osaka_params, force=True,
                                 publ_ctx_file=publ_ctx_file, publ_ctx_url=publ_ctx_url)
@@ -437,14 +437,14 @@ def ingest(objectid, dsets_file, grq_update_url, dataset_processed_queue,
                 else:
                     msg = "Detected orphaned dataset without ES doc. Forcing publish."
                     logger.warn(msg)
-                    log_custom_event('orphaned_dataset-no_es_doc', 'clobber',
-                                     { 'orphan_info': {
-                                           'payload_id': payload_id,
-                                           'payload_hash': payload_hash,
-                                           'task_id': task_id,
-                                           'dataset_id': objectid,
-                                           'dataset_url': pub_path_url,
-                                           'msg': msg }})
+                    #log_custom_event('orphaned_dataset-no_es_doc', 'clobber',
+                    #                 { 'orphan_info': {
+                    #                       'payload_id': payload_id,
+                    #                       'payload_hash': payload_hash,
+                    #                       'task_id': task_id,
+                    #                       'dataset_id': objectid,
+                    #                       'dataset_url': pub_path_url,
+                    #                       'msg': msg }})
                     publish_dataset(local_prod_path, pub_path_url, params=osaka_params, force=True,
                                     publ_ctx_file=publ_ctx_file, publ_ctx_url=publ_ctx_url)
         tx_t2 = datetime.utcnow()
